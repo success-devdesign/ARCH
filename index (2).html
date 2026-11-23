@@ -1,0 +1,1973 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* visual polish: editorial rhythm, luminous borders and image-forward cards */
+.sec-head{max-width:800px}
+.sec-head h2{max-width:780px}
+.ind{border-radius:4px;box-shadow:0 18px 44px rgba(0,0,0,.18)}
+.ind .cap{padding:76px 24px 24px}
+.tool{border-radius:4px;position:relative;overflow:hidden;min-height:220px;transition:transform .3s,border-color .3s,background .3s}
+.tool:hover{transform:translateY(-5px);border-color:var(--edge2);background:rgba(255,255,255,.075)}
+.tool::after{content:"";position:absolute;right:-48px;bottom:-72px;width:180px;height:180px;border:1px solid rgba(91,227,158,.12);border-radius:50%;box-shadow:0 0 0 22px rgba(91,227,158,.025),0 0 0 44px rgba(91,227,158,.02);pointer-events:none}
+.hero3d{background-image:radial-gradient(ellipse 75% 85% at 50% 38%,rgba(22,150,108,.36) 0%,rgba(8,70,52,.16) 55%,transparent 100%),linear-gradient(115deg,rgba(2,18,13,.18),rgba(2,18,13,.04))}
+@media(prefers-reduced-motion:reduce){.pcard-media img,.tool{transition:none}}
+
+</style></head><body>
+<title>ARCH Ecommerce Solution</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ARCH Ecommerce Solution helps Shopify brands design, develop and optimise high-performing online stores.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout concept: premium emerald. One continuous deep-emerald gradient sits behind every page. Panels are translucent glass with hairline mint edges. Mint is the single accent, used for lines, numerals, the primary button and the 3D hero. */
+:root{
+--bg0:#03140F;--bg1:#052A21;--bg2:#073B2D;
+--panel:rgba(255,255,255,.045);--panel2:rgba(255,255,255,.075);
+--edge:rgba(120,230,175,.20);--edge2:rgba(120,230,175,.42);--line:rgba(170,235,200,.16);
+--text:#F3F8F5;--body:#CFE3D9;--muted:#9EBFB0;--mint:#5BE39E;--mint2:#8CF5BF;
+--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+--sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif
+}
+*{box-sizing:border-box}
+html{background:var(--bg0)}
+body{margin:0;min-height:100svh;color:var(--body);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;
+background-color:var(--bg1);
+background-image:radial-gradient(1100px 720px at 10% -4%,rgba(18,128,94,.55),transparent 62%),radial-gradient(900px 620px at 96% 18%,rgba(12,98,72,.45),transparent 62%),radial-gradient(1000px 760px at 50% 100%,rgba(10,84,62,.5),transparent 66%),linear-gradient(180deg,#041B15 0%,#06332A 28%,#052A21 58%,#031812 100%);
+background-repeat:no-repeat}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#041B15}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;color:var(--text);text-wrap:balance}
+h1{font-size:clamp(44px,5.4vw,76px);line-height:1.03;letter-spacing:-.012em}
+h2{font-size:clamp(34px,4vw,54px);line-height:1.08;letter-spacing:-.008em}
+h3{font-size:28px;line-height:1.2}
+em{font-style:italic}
+h1 em,h2 em,h3 em{color:var(--mint)}
+a{color:var(--mint2)}a:hover{color:var(--text)}
+:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(clamp(20px,4vw,48px),env(safe-area-inset-left,0px));padding-right:max(clamp(20px,4vw,48px),env(safe-area-inset-right,0px))}
+.eb{font:500 13px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+.eyr{display:flex;align-items:center;gap:14px}
+.eyr::before{content:"";width:40px;height:1px;background:var(--mint);flex:0 0 auto}
+.num{font-variant-numeric:tabular-nums}
+.lead{font-size:20px;max-width:680px;color:var(--body)}
+.sf{font-family:var(--serif)}
+
+/* section grounds: all translucent so the page-wide emerald blend shows through */
+.bg-cream{background:transparent}
+.bg-ivory{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.bg-pale{background:rgba(3,20,15,.40);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.bg-navy{background:linear-gradient(135deg,rgba(2,14,10,.82),rgba(6,50,39,.55));border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);color:var(--body)}
+.sec{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px)}
+.sec-sm{padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px)}
+.stack{display:flex;flex-direction:column;gap:20px}
+.split{display:flex;flex-wrap:wrap;gap:56px 96px}
+.col-head{flex:1 1 340px;max-width:430px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.col-body{flex:1.4 1 480px;min-width:0}
+.sec-head{display:flex;flex-direction:column;gap:20px;max-width:720px}
+.phead{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(48px,6vw,80px);display:flex;flex-direction:column;gap:28px}
+.phead h1{max-width:960px}
+
+/* buttons and links */
+.btn{display:inline-block;text-decoration:none;font:500 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:17px 28px;border:1px solid transparent;cursor:pointer;text-align:center;transition:background .2s,color .2s,border-color .2s,box-shadow .2s}
+.btn-dark,.btn-gold{background:linear-gradient(135deg,#7DF3B5,#33C783);color:#03140F;border-color:transparent}
+.btn-dark:hover,.btn-gold:hover{background:linear-gradient(135deg,#A4FFCA,#5BE39E);color:#03140F;box-shadow:0 0 28px rgba(91,227,158,.38)}
+.btn-line{background:rgba(4,30,23,.35);border-color:var(--edge2);color:var(--text)}
+.btn-line:hover{background:rgba(91,227,158,.14);border-color:var(--mint);color:var(--text)}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.lnk{color:var(--mint2);text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:6px}
+.lnk:hover{color:var(--text)}
+
+/* header */
+.top{background:#02100C;color:var(--mint);text-align:center;padding:10px 20px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--edge)}
+.top a{color:var(--text);margin-left:14px;text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:5px}
+.top a:hover{color:var(--mint)}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(4,24,18,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 32px;padding-top:12px;padding-bottom:12px}
+.logo{display:inline-flex;align-items:center;text-decoration:none}
+.logo img{display:block;height:44px;width:auto;max-width:100%}
+.menu{display:flex;align-items:center;gap:8px 30px;flex-wrap:wrap}
+.nl{color:var(--body);text-decoration:none;font-size:15px;letter-spacing:.03em;padding:8px 0}
+.nl:hover{color:var(--text);text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:8px}
+.nl[aria-current=page]{color:var(--text);text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:8px}
+.burger{display:none;min-width:44px;min-height:44px;padding:0 16px;background:transparent;border:1px solid var(--edge2);color:var(--text);font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+@media (max-width:900px){
+.burger{display:inline-flex;align-items:center}
+.menu{display:none;position:absolute;left:0;right:0;top:100%;background:rgba(4,24,18,.97);flex-direction:column;align-items:flex-start;gap:4px;padding:16px max(20px,env(safe-area-inset-right,0px)) 24px max(20px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--edge)}
+.menu.open{display:flex}
+.menu .btn{margin-top:10px}
+}
+
+/* 3D hero */
+.hero3d{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(560px,84svh,800px);display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse 75% 85% at 50% 38%,rgba(22,150,108,.36) 0%,rgba(8,70,52,.16) 55%,transparent 100%)}
+#stage{position:absolute;inset:0;z-index:0}
+#stage canvas{display:block;width:100%;height:100%}
+.wash{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 42% 48% at 50% 50%,rgba(3,22,16,.80) 0%,rgba(3,22,16,.52) 55%,rgba(3,22,16,0) 100%)}
+.h3-in{position:relative;z-index:2;width:100%;padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(56px,8vw,96px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px}
+.pill{display:inline-flex;align-items:center;gap:12px;font:500 12px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mint2);border:1px solid var(--edge2);background:rgba(4,30,23,.6);padding:9px 20px;border-radius:999px}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}
+.hero3d h1{font-size:clamp(46px,6.4vw,92px);line-height:1.02;letter-spacing:-.014em;max-width:980px}
+.hero3d .lead{font-size:clamp(17px,1.5vw,20px);line-height:1.6;max-width:560px;color:var(--body)}
+.hero3d .btns{justify-content:center}
+.hero-live{width:min(760px,100%);padding:14px 16px 16px;border:1px solid rgba(130,255,195,.25);border-radius:18px;background:rgba(3,22,16,.58);box-shadow:0 18px 65px rgba(0,0,0,.22);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hero-live-label{font:600 9px/1.4 var(--sans);letter-spacing:.2em;color:var(--mint2);text-align:left;margin-bottom:10px}
+.hero-live-label span{color:var(--muted);letter-spacing:.12em}
+.hero-live-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.hero-live-card{text-align:left;padding:12px 14px;border:1px solid rgba(130,255,195,.14);background:rgba(255,255,255,.035);border-radius:12px;min-width:0}
+.hero-live-card span,.hero-live-card small{display:block;color:var(--muted);font:500 10px/1.4 var(--sans)}
+.hero-live-card strong{display:block;margin:6px 0 3px;color:#eafff2;font:500 clamp(19px,3vw,28px)/1 var(--serif);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.hero-live-card small{font-size:9px;color:var(--mint2)}
+@media(max-width:560px){.hero-live{padding:11px}.hero-live-grid{gap:6px}.hero-live-card{padding:10px 8px}.hero-live-card span{font-size:9px}.hero-live-card strong{font-size:18px}.hero-live-card small{font-size:8px}}
+
+.proof{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.proof span{display:inline-flex;align-items:center;gap:10px}
+.proof span::before{content:"";width:18px;height:1px;background:var(--mint)}
+.hero-fade{position:absolute;left:0;right:0;bottom:0;height:100px;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(3,20,15,0),rgba(3,20,15,.35))}
+/* CSS fallback, shown only when the browser blocks WebGL */
+.fb{position:absolute;inset:0;z-index:0;display:none;overflow:hidden}
+.hero3d.no3d .fb{display:block}
+.fb i{position:absolute;width:clamp(150px,20vw,280px);aspect-ratio:1.75;border:2px solid rgba(120,245,180,.65);border-radius:14px;box-shadow:0 0 36px rgba(70,255,160,.30);opacity:0;animation:fbdrift 14s linear infinite;background:linear-gradient(#5BE39E,#5BE39E) 14px 14px/18px 18px no-repeat,linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) 42px 18px/70px 8px no-repeat,linear-gradient(135deg,transparent 54%,rgba(91,227,158,.45) 55%) 14px 54px/72% 56% no-repeat,linear-gradient(160deg,#0F5A45,#04150F)}
+.fb i:nth-child(1){left:6%;top:12%;--r:-6deg;animation-delay:0s}
+.fb i:nth-child(2){left:70%;top:8%;--r:5deg;animation-delay:-2s}
+.fb i:nth-child(3){left:78%;top:52%;--r:-4deg;animation-delay:-4s}
+.fb i:nth-child(4){left:4%;top:56%;--r:4deg;animation-delay:-6s}
+.fb i:nth-child(5){left:38%;top:2%;--r:3deg;animation-delay:-8s}
+.fb i:nth-child(6){left:40%;top:66%;--r:-3deg;animation-delay:-10s}
+.fb i:nth-child(7){left:56%;top:34%;--r:6deg;animation-delay:-12s}
+@keyframes fbdrift{0%{opacity:0;transform:scale(.45) rotate(var(--r,0deg))}15%{opacity:.95}80%{opacity:.9}100%{opacity:0;transform:scale(1.9) rotate(var(--r,0deg))}}
+
+/* home: example block, strip, rows, cards, steps */
+.hero{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(56px,8vw,104px);display:flex;flex-wrap:wrap;align-items:center;gap:56px 72px}
+.hero-l{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero-r{flex:1 1 400px;min-width:0}
+.hero-l .lead{max-width:560px}
+.ex{background:var(--panel2);border:1px solid var(--edge2);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:22px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.ex h3{font-size:32px;line-height:1.15}
+.ex ul li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line);font-size:16px;color:var(--text)}
+.ex ul li:last-child{border-bottom:1px solid var(--line)}
+.ex ul li span:first-child{color:var(--muted)}
+.ex .bl{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:var(--muted)}
+.bar{height:14px;background:rgba(255,255,255,.10)}
+.bar i{display:block;height:100%}
+.note{font-size:13px;line-height:1.55;color:var(--muted)}
+.strip{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 56px}
+.strip ul{flex:1 1 480px;min-width:0;display:flex;flex-wrap:wrap;gap:8px 34px;font:italic 400 23px/1.4 var(--serif);color:var(--text)}
+.rows>li{border-top:1px solid var(--line);padding:26px 0;display:flex;flex-wrap:wrap;gap:8px 32px}
+.rows>li:last-child{border-bottom:1px solid var(--line)}
+.rows h3{flex:1 1 190px;font-size:32px}
+.rows p{flex:1.5 1 260px}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 250px;min-width:0;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);padding:32px 28px;display:flex;flex-direction:column;gap:18px}
+.card .big{font:500 54px/1 var(--serif);color:var(--mint)}
+.card h3{font-size:26px}
+.card p{font-size:15px;line-height:1.55;color:var(--muted)}
+.card li{border-top:1px solid var(--line);padding:10px 0;font-size:15px;line-height:1.4;color:var(--body)}
+.stmt{font:500 clamp(30px,4.2vw,56px)/1.15 var(--serif);color:var(--text);max-width:1000px}
+.stmt em{color:var(--mint)}
+.steps{display:flex;flex-wrap:wrap;gap:40px 32px}
+.steps>li{flex:1 1 240px;min-width:0;border-top:1px solid var(--mint);padding-top:24px;display:flex;flex-direction:column;gap:14px}
+.steps .n{font:500 52px/1 var(--serif);color:var(--mint)}
+.steps p{font-size:16px}
+.cols{display:flex;flex-wrap:wrap;gap:40px 40px}
+.cols>*{flex:1 1 260px;min-width:0;border-top:1px solid var(--mint);padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.cols p{font-size:16px}
+.cta-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 56px}
+.cta-in .stack{flex:1 1 440px;min-width:0;max-width:700px}
+.cta-in p{font-size:18px}
+
+/* services */
+.phead-split{display:flex;flex-wrap:wrap;align-items:flex-end;gap:48px 72px}
+.phead-split>.stack{flex:1.3 1 460px;min-width:0;gap:28px}
+.idx{flex:1 1 360px;min-width:0;border-bottom:1px solid var(--line)}
+.gl{display:flex;width:100%;align-items:baseline;gap:20px;padding:16px 0;min-height:44px;border:0;border-top:1px solid var(--line);background:transparent;text-align:left;cursor:pointer;font:400 17px/1.4 var(--sans);color:var(--text)}
+.gl .l{flex:0 0 48px;font:500 34px/1 var(--serif);color:var(--mint)}
+.gl .t{flex:1;min-width:0}
+.gl .r{font:500 13px/1.4 var(--sans);letter-spacing:.18em;color:var(--muted)}
+.gl:hover .t,.gl[aria-pressed=true] .t{text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:6px}
+#svc-grid{scroll-margin-top:96px}
+.ghead{background:rgba(3,20,15,.45);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.ghead .wrap{padding-top:56px;padding-bottom:56px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:20px 48px}
+.ghead .big{flex:0 0 auto;font:500 96px/.8 var(--serif);color:var(--mint)}
+.ghead .ht{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.ghead h2{font-size:clamp(32px,3.6vw,48px)}
+.ghead p{flex:1 1 320px;min-width:0;color:var(--muted)}
+.srow{padding-top:40px;padding-bottom:40px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:20px 40px}
+.srow .sn{flex:0 0 64px;font:500 40px/1 var(--serif);color:var(--mint)}
+.srow .sm{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.srow .sm h3{font-size:30px}
+.srow .sm p{font-size:16px}
+.srow .ss{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.srow .ss .eb{margin-bottom:6px}
+.srow .ss p{font-size:15px}
+.srow .ss .ob{color:var(--text)}
+
+/* work */
+.tiles{display:flex;flex-wrap:wrap;gap:64px 40px}
+.tile{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.shot{background:var(--panel2);border:1px solid var(--edge);aspect-ratio:3/2;max-width:100%;padding:7%;display:flex;flex-direction:column}
+.shot .fr{flex:1;background:rgba(3,22,16,.7);border:1px solid var(--edge2);display:flex;flex-direction:column}
+.shot .nv{height:11%;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4%}
+.shot .nv i:first-child{width:18%;height:5px;background:var(--text)}
+.shot .nv i:last-child{width:32%;height:3px;background:var(--line)}
+.shot .hr{flex:1;background:linear-gradient(135deg,#0F6B50,#052A21);margin:4%;display:flex;align-items:flex-end;padding:4%}
+.shot .hr i{width:26%;height:6px;background:var(--mint)}
+.shot .pr{display:flex;gap:4%;padding:0 4% 4%}
+.shot .pr i{flex:1;aspect-ratio:1;background:var(--panel2)}
+.tile h3{font-size:34px}
+.tile .res{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 14px;border-top:1px solid var(--line);padding-top:14px;margin-top:4px}
+.tile .res b{font:500 44px/1 var(--serif);color:var(--mint)}
+.tile .res span{font-size:15px;color:var(--muted)}
+
+/* process, packages, about, journal */
+.pstep{border-top:1px solid var(--line);padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;gap:28px 48px}
+.pstep:first-child{border-top-color:var(--mint)}
+.pstep:last-child{border-bottom:1px solid var(--line)}
+.pstep>div{min-width:0;display:flex;flex-direction:column;gap:12px}
+.pstep>div:nth-child(1){flex:1 1 260px;gap:14px}
+.pstep>div:nth-child(2),.pstep>div:nth-child(3){flex:1.2 1 300px}
+.pstep .n{font:500 64px/1 var(--serif);color:var(--mint)}
+.pstep h2{font-size:clamp(34px,3.6vw,46px)}
+.pstep ul{font-size:16px;display:flex;flex-direction:column;gap:8px}
+.pstep p{font-size:16px}
+.defs>div{border-top:1px solid var(--line);padding:22px 0;display:flex;flex-wrap:wrap;gap:6px 32px}
+.defs>div:last-child{border-bottom:1px solid var(--line)}
+.defs dt{flex:1 1 200px;font:500 28px/1.2 var(--serif);color:var(--text)}
+.defs dd{flex:1.5 1 260px;font-size:16px}
+.pkgs{display:flex;flex-wrap:wrap;gap:24px}
+.pkg{flex:1 1 320px;min-width:0;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);padding:40px 36px;display:flex;flex-direction:column;gap:24px}
+.pkg h2{font-size:40px}
+.pkg li{border-top:1px solid var(--line);padding:12px 0;font-size:16px}
+.pkg li:last-child{border-bottom:1px solid var(--line)}
+.pkg .foot-b{margin-top:auto;display:flex;flex-direction:column;gap:16px}
+.pkg .price{font:500 34px/1.2 var(--serif);color:var(--text)}
+.pkg-dark{background:linear-gradient(165deg,#12755A,#06352A);border-color:var(--edge2);border-top-color:var(--mint2);color:var(--text);box-shadow:0 0 44px rgba(91,227,158,.16)}
+.pkg-dark .eb{color:var(--mint2)}
+.pkg-dark li{border-color:rgba(255,255,255,.2)}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;font:500 28px/1.2 var(--serif);color:var(--text)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:0 0 auto;font:400 28px/1 var(--sans);color:var(--mint)}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 24px;font-size:16px;max-width:640px}
+.pr-pair{display:flex;flex-wrap:wrap;gap:24px 40px;border-top:1px solid var(--line);padding-top:28px;margin-top:8px}
+.pr-pair>div{flex:1 1 140px;min-width:0}
+.pr-pair b{display:block;font:500 44px/1 var(--serif);color:var(--text)}
+.pr-pair .eb{margin-top:6px}
+.principles{display:flex;flex-wrap:wrap;gap:0 56px}
+.principles>div{flex:1 1 440px;min-width:0;border-top:1px solid var(--mint);padding:28px 0 44px;display:flex;flex-direction:column;gap:12px}
+.principles h3{font-size:34px}
+.team{display:flex;flex-wrap:wrap;gap:40px 32px}
+.team>div{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.ph{background:var(--panel2);border:1px solid var(--edge);aspect-ratio:4/5;max-width:100%;display:flex;align-items:center;justify-content:center}
+.feat{display:flex;flex-wrap:wrap;gap:32px 56px;align-items:center;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);padding:clamp(20px,3vw,40px)}
+.feat .img{flex:1.1 1 380px;min-width:0;background:var(--panel2);border:1px solid var(--edge);aspect-ratio:3/2;max-width:100%;display:flex;align-items:center;justify-content:center}
+.feat .tx{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.feat h2{font-size:clamp(32px,3.6vw,48px)}
+.posts{display:flex;flex-wrap:wrap;gap:48px 40px}
+.post{flex:1 1 300px;min-width:0;border-top:1px solid var(--mint);padding-top:22px;display:flex;flex-direction:column;gap:12px}
+.post h3{font-size:30px}
+.post p{font-size:16px}
+.meta{font-size:14px;color:var(--muted)}
+
+/* forms */
+.fi{width:100%;height:52px;padding:0 16px;font:400 16px/1.4 var(--sans);color:var(--text);background:rgba(2,16,12,.55);border:1px solid var(--edge2);border-radius:0}
+.fi::placeholder{color:var(--muted)}
+select.fi option{background:#06251D;color:#F3F8F5}
+textarea.fi{height:auto;min-height:140px;padding:14px 16px;resize:vertical}
+.fld{display:flex;flex-direction:column;gap:8px;flex:1 1 220px;min-width:0}
+.frow{display:flex;flex-wrap:wrap;gap:20px}
+.contact{display:flex;flex-wrap:wrap;align-items:flex-start;gap:56px 80px}
+.contact-l{flex:1 1 380px;max-width:480px;min-width:0;display:flex;flex-direction:column;gap:36px}
+.contact-r{flex:1.2 1 440px;min-width:0}
+.formbox{background:var(--panel2);border:1px solid var(--edge2);border-top:2px solid var(--mint);padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:24px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.formbox h2{font-size:clamp(30px,3.2vw,40px)}
+.next li{border-top:1px solid var(--line);padding:16px 0;display:flex;gap:20px;align-items:baseline;font-size:16px}
+.next li:last-child{border-bottom:1px solid var(--line)}
+.next .n{flex:0 0 28px;font:500 32px/1 var(--serif);color:var(--mint)}
+.consent{display:flex;align-items:flex-start;gap:14px;min-height:44px}
+.consent input{flex:0 0 22px;width:22px;height:22px;margin:3px 0 0;accent-color:#33C783}
+.consent label{font-size:15px;color:var(--muted)}
+.status{padding:14px 16px;border:1px solid var(--mint);background:rgba(91,227,158,.10);font-size:15px;color:var(--text)}
+.nlform{flex:1 1 420px;min-width:0;max-width:560px;display:flex;flex-direction:column;gap:10px}
+.nlform label{font:500 13px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+.nlform .frow{gap:12px}
+.nlform .fi{flex:1 1 240px;width:auto;min-width:0}
+
+/* footer */
+.foot{background:rgba(2,12,9,.86);color:var(--body);border-top:1px solid var(--edge)}
+.foot .top-f{padding-top:clamp(56px,7vw,88px);padding-bottom:32px;display:flex;flex-wrap:wrap;gap:48px 64px}
+.foot .top-f>div{min-width:0;display:flex;flex-direction:column;gap:12px}
+.foot .brand{flex:2 1 320px;gap:20px}
+.foot .brand .logo img{height:72px}
+.foot .brand p{font-size:16px;line-height:1.7;max-width:380px}
+.foot h4{font:500 12px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin-bottom:4px}
+.foot a,.foot span{color:var(--body);text-decoration:none;font-size:15px}
+.foot a:hover{color:var(--mint)}
+.foot .linkbtn{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--body);font:400 15px/1.6 var(--sans)}
+.foot .linkbtn:hover{color:var(--mint)}
+.foot .bot{border-top:1px solid var(--edge);padding-top:24px;padding-bottom:32px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:13px;color:var(--muted)}
+.foot .bot span{font-size:13px;color:var(--muted)}
+.foot .bot .lg{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+
+/* home: trust bar, problems, services */
+.ico{width:48px;height:48px;border:1px solid var(--edge2);background:rgba(91,227,158,.08);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.ico svg{width:24px;height:24px;stroke:var(--mint);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.caps{display:flex;flex-wrap:wrap;gap:32px 24px}
+.cap{flex:1 1 190px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.cap h3{font-size:24px;line-height:1.2}
+.figs{display:flex;flex-wrap:wrap;gap:24px 40px;border-top:1px solid var(--line);padding-top:32px;margin-top:40px}
+.fig{flex:1 1 180px;min-width:0}
+.fig b{display:block;font:500 48px/1 var(--serif);color:var(--text)}
+.fig .eb{margin-top:8px}
+.figs-note{width:100%;font-size:13px;color:var(--muted)}
+.pcards{display:flex;flex-wrap:wrap;gap:24px}
+.pcard{flex:1 1 250px;min-width:0;background:var(--panel);border:1px solid var(--edge);padding:32px 28px;display:flex;flex-direction:column;gap:16px}
+.pcard h3{font-size:28px}
+.pcard p{font-size:16px;color:var(--body)}
+.pnote{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;border-top:1px solid var(--line);padding-top:32px}
+.pnote p{font-size:18px;max-width:560px;color:var(--text)}
+.scards{display:flex;flex-wrap:wrap;gap:24px}
+.scard{flex:1 1 320px;min-width:0;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);padding:36px 32px;display:flex;flex-direction:column;gap:16px;text-decoration:none;transition:background .2s,border-color .2s}
+.scard:hover{background:var(--panel2);border-color:var(--edge2);border-top-color:var(--mint2)}
+.scard h3{font-size:30px}
+.scard p{font-size:16px;color:var(--body)}
+.scard .more{margin-top:auto;padding-top:8px;font:500 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mint2)}
+.scard .more::after{content:" \2192"}
+.scard:hover .more{color:var(--text)}
+@media (prefers-reduced-motion:reduce){.btn,.scard{transition:none}.fb i{animation:none;opacity:.75;transform:scale(.9) rotate(var(--r,0deg))}}
+
+/* home sections 2 to 15 */
+.sec-head p{font-size:18px;color:var(--body)}
+.ic{width:52px;height:52px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--edge2);background:rgba(91,227,158,.08);color:var(--mint);border-radius:50%;flex:0 0 auto}
+.ic svg{width:24px;height:24px}
+.ic.sq{border-radius:12px}
+.g{display:grid;gap:24px}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g3s{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gp{grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 32px}
+@media (max-width:1040px){.g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.gp{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.g3s{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.g4,.g3,.g2{grid-template-columns:minmax(0,1fr)}}
+.pcard{background:var(--panel);border:1px solid var(--edge);padding:32px 28px;display:flex;flex-direction:column;gap:16px;transition:border-color .2s,transform .2s,background .2s}
+.pcard:hover{border-color:var(--edge2);background:var(--panel2);transform:translateY(-3px)}
+.pcard h3{font-size:28px}
+.pcard p{font-size:16px;color:var(--muted)}
+
+/* trust */
+.trust{display:grid;gap:16px;grid-template-columns:repeat(6,minmax(0,1fr))}
+.trust li:nth-child(-n+3){grid-column:span 2}
+.trust li:nth-child(n+4){grid-column:span 3}
+@media (min-width:1100px){.trust{grid-template-columns:repeat(5,minmax(0,1fr))}.trust li:nth-child(n){grid-column:span 1}}
+@media (max-width:620px){.trust{grid-template-columns:minmax(0,1fr)}.trust li:nth-child(n){grid-column:span 1}}
+.trust li{flex:1 1 210px;min-width:0;display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--edge);background:var(--panel);font:500 15px/1.35 var(--sans);color:var(--text)}
+.trust .ic{width:44px;height:44px}
+.figs{display:flex;flex-wrap:wrap;gap:24px 40px;padding:24px;border:1px dashed var(--edge2)}
+.figs>div{flex:1 1 160px;min-width:0}
+.figs b{display:block;font:500 40px/1 var(--serif);color:var(--mint)}
+.figs .eb{margin-top:6px;color:var(--muted)}
+.figs-note{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* store mockups (portfolio and before/after) */
+.proj{display:flex;flex-direction:column;gap:20px;min-width:0}
+.live-shot{position:relative;display:block;overflow:hidden;aspect-ratio:16/10;background:#08251d;border:1px solid var(--edge);}
+.live-shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1);}
+.proj:hover .live-shot img{transform:scale(1.045)}
+.live-shot::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(2,14,10,.55));pointer-events:none}
+.live-chip{position:absolute;z-index:2;top:14px;left:14px;padding:8px 11px;background:rgba(2,16,12,.82);border:1px solid var(--edge2);color:var(--mint2);font:500 10px/1.2 var(--sans);letter-spacing:.15em;text-transform:uppercase}
+.live-open{display:inline-flex;align-items:center;gap:9px;color:var(--mint2);font:500 12px/1.3 var(--sans);letter-spacing:.13em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--mint);padding-bottom:6px;align-self:flex-start}
+.live-open::after{content:"↗";font-size:16px}
+.gym-case{align-items:stretch}
+.gym-before,.gym-after{min-width:0;display:flex;flex-direction:column;gap:18px}
+.gym-before h3,.gym-after h3{font-size:clamp(25px,3vw,34px)}
+.gym-shot{display:block;width:100%;height:auto;object-fit:contain;background:#07140f;border:1px solid var(--edge2)}
+.gym-after .lnk{margin-top:auto}
+@media(max-width:640px){.live-shot{aspect-ratio:4/3}.gym-shot{aspect-ratio:16/9;object-fit:cover}}
+.pv{position:relative;background:var(--panel2);border:1px solid var(--edge);padding:clamp(10px,1.6vw,18px)}
+.mockwrap{container-type:inline-size}
+.badge{position:absolute;top:clamp(18px,2.4vw,28px);right:clamp(18px,2.4vw,28px);z-index:2;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:7px 10px;color:#03140F;background:var(--mint2)}
+.pinfo{display:flex;flex-direction:column;gap:10px}
+.pinfo h3{font-size:34px}
+.pinfo .sv{font-size:14px;color:var(--text)}
+.pinfo p{font-size:16px;color:var(--muted)}
+.mock{background:#06251D;border:1px solid var(--edge2);display:flex;flex-direction:column;overflow:hidden;aspect-ratio:16/10}
+.mk-bar{display:flex;align-items:center;gap:1.4cqw;padding:1.6cqw 2cqw;background:rgba(255,255,255,.06);border-bottom:1px solid var(--line)}
+.mk-bar i{width:1.5cqw;height:1.5cqw;border-radius:50%;background:rgba(255,255,255,.3)}
+.mk-bar span{flex:1;height:2.4cqw;margin-left:2cqw;background:rgba(255,255,255,.08);border-radius:2cqw}
+.mk-nav{display:flex;align-items:center;justify-content:space-between;padding:1.6cqw 3cqw;border-bottom:1px solid var(--line)}
+.mk-nav b{font:600 2.1cqw/1 var(--sans);letter-spacing:.2em;color:var(--text)}
+.mk-nav span{display:flex;gap:1.8cqw}
+.mk-nav span i{width:5cqw;height:.7cqw;background:rgba(255,255,255,.35)}
+.mk-hero{position:relative;flex:1;min-height:0;background:linear-gradient(135deg,var(--hA),var(--hB));padding:0 4cqw;display:flex;align-items:center;overflow:hidden}
+.mk-hero .tx{display:flex;flex-direction:column;gap:1.4cqw;max-width:46%}
+.mk-hero .tx b{font:500 5.2cqw/1.05 var(--serif);color:var(--text)}
+.mk-hero .tx i{display:block;height:.8cqw;background:rgba(255,255,255,.4);width:20cqw;max-width:100%}
+.mk-hero .tx u{display:block;width:12cqw;height:3.2cqw;background:var(--mint);margin-top:.6cqw}
+.mk-hero svg{position:absolute;right:2cqw;top:6%;height:88%;width:auto}
+.mk-grid{display:flex;gap:2cqw;padding:2cqw 3cqw 3cqw}
+.mk-grid i{flex:1;aspect-ratio:1.4;background:rgba(255,255,255,.07);border:1px solid var(--line)}
+
+/* industries */
+.ind{position:relative;aspect-ratio:4/3;border:1px solid var(--edge);overflow:hidden;background:#06251D}
+.ind>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.ind:hover>img{transform:scale(1.055)}
+.ind .cap{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;background:linear-gradient(to top,rgba(2,14,10,.96),rgba(2,14,10,.05));display:flex;flex-direction:column;gap:4px}
+.ind h3{font-size:28px}
+.ind p{font-size:14px;color:var(--body)}
+
+
+/* premium editorial imagery layer */
+.hero-human{position:absolute;z-index:1;right:clamp(18px,5vw,72px);bottom:9%;width:clamp(170px,20vw,270px);height:clamp(230px,29vw,360px);overflow:hidden;border:1px solid rgba(140,245,191,.48);border-radius:150px 150px 18px 18px;box-shadow:0 28px 90px rgba(0,0,0,.48),0 0 45px rgba(91,227,158,.12);opacity:.82;transform:rotate(3deg)}
+.hero-human img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.78) contrast(1.04)}
+.hero-human::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(3,20,15,.78) 100%)}
+.hero-human-tag{position:absolute;z-index:2;bottom:16px;left:18px;right:12px;color:#effff5;font:500 11px/1.35 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.hero-human-tag b{display:block;color:var(--mint2);font:500 22px/1.1 var(--serif);letter-spacing:0;text-transform:none;margin-bottom:4px}
+.hero-human-left{right:auto;left:clamp(18px,5vw,72px);width:clamp(125px,14vw,190px);height:clamp(170px,22vw,260px);bottom:14%;border-radius:16px 110px 16px 16px;opacity:.56;transform:rotate(-4deg)}
+.hero-human-left img{object-position:center}
+@media(max-width:900px){.hero-human{right:2%;width:145px;height:205px;opacity:.30}.hero-human-left{display:none}.h3-in{padding-left:18px;padding-right:18px}.hero3d .lead{max-width:500px}}
+@media(max-width:560px){.hero-human{right:-22px;bottom:18%;width:116px;height:160px;opacity:.22}.hero-live{position:relative;z-index:3}}
+.pcard{position:relative;overflow:hidden}
+.pcard-media{position:relative;display:block;width:calc(100% + 56px);margin:-32px -28px 4px;height:150px;overflow:hidden;background:#052a21}
+.pcard-media img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.pcard:hover .pcard-media img{transform:scale(1.06);filter:saturate(1.08)}
+.pcard-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,20,15,.02),rgba(3,20,15,.56))}
+.pcard .ic{position:relative;z-index:1;box-shadow:0 8px 28px rgba(0,0,0,.2)}
+.team-feature{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid var(--edge);background:var(--panel);overflow:hidden;align-items:stretch}
+.team-feature-photo{min-height:390px;position:relative;overflow:hidden}
+.team-feature-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(.82)}
+.team-feature-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,rgba(3,20,15,.45))}
+.team-feature-copy{padding:clamp(28px,4vw,54px);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.team-feature-copy h3{font-size:clamp(30px,3.4vw,44px)}
+.team-feature-copy p{font-size:17px;color:var(--body)}
+.team-feature-kicker{font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+@media(max-width:760px){.team-feature{grid-template-columns:1fr}.team-feature-photo{min-height:280px}.team-feature-photo::after{background:linear-gradient(180deg,transparent 60%,rgba(3,20,15,.35))}}
+
+/* tools */
+.tool{display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:32px 28px;border:1px solid var(--edge);background:var(--panel)}
+.tool h3{font-size:34px}
+.tool p{font-size:16px;color:var(--muted)}
+.tool-logo{display:flex;align-items:center;justify-content:flex-start;min-height:68px;width:100%}
+.tool-logo img{display:block;max-width:168px;max-height:54px;width:auto;height:auto;object-fit:contain} 
+
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.proc li{border-top:1px solid var(--mint);padding-top:22px;display:flex;flex-direction:column;gap:12px}
+.proc .pn{font:500 56px/1 var(--serif);color:var(--mint)}
+.proc li>div{display:flex;flex-direction:column;gap:10px}
+.proc h3{font-size:26px}
+.proc p{font-size:15px;color:var(--muted)}
+@media (max-width:1040px){
+.proc{grid-template-columns:minmax(0,1fr);gap:0}
+.proc li{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:8px 24px;padding:24px 0;border-top:1px solid var(--line)}
+.proc li:first-child{border-top-color:var(--mint)}
+.proc .pn{flex:0 0 84px}
+.proc li>div{flex:1 1 260px}
+}
+
+/* results */
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.checks li{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-top:1px solid var(--line)}
+.checks li:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+.checks .ic{width:44px;height:44px}
+.checks h3{font-size:26px;margin-bottom:6px}
+.checks p{font-size:15px;color:var(--muted)}
+@media (max-width:800px){.checks{grid-template-columns:minmax(0,1fr)}.checks li:nth-last-child(2){border-bottom:0}}
+
+/* before and after */
+.ba-view{position:relative;aspect-ratio:16/9;container-type:inline-size;overflow:hidden;border:1px solid var(--edge2);touch-action:pan-y;cursor:ew-resize;background:#06251D;-webkit-user-select:none;user-select:none}
+
+.ba-wrap{display:flex;flex-direction:column;gap:10px;max-width:1120px;margin:0 auto;width:100%}
+.ba-after img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.ba-before{z-index:2}
+.ba-before .old{width:100%;height:100%;font-size:1cqw}
+.ba-captions{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px}
+.ba-captions b{color:var(--mint2);font-weight:600}
+@media(max-width:640px){.ba-view{aspect-ratio:4/3}.ba-captions{font-size:10px}}
+.ba-after,.ba-before{position:absolute;inset:0}
+.ba-after .mock{height:100%;aspect-ratio:auto;border:0}
+.ba-before{clip-path:inset(0 50% 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:var(--mint2);box-shadow:0 0 18px rgba(91,227,158,.7);pointer-events:none;z-index:3}
+.ba-handle::after{content:"\2039  \203A";position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--bg0);border:2px solid var(--mint2);color:var(--mint2);font:400 22px/44px var(--sans);text-align:center;white-space:pre}
+.ba-tag{position:absolute;top:12px;z-index:4;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:7px 10px;background:rgba(2,14,10,.82);color:var(--text);border:1px solid var(--edge2)}
+.ba-tag.l{left:12px}
+.ba-tag.r{right:12px}
+.ba-range{display:block;width:100%;margin-top:6px;height:44px;accent-color:#33C783}
+.ba-note{padding:24px 26px;border:1px solid var(--edge);background:var(--panel);display:flex;flex-direction:column;gap:14px}
+.ba-note.good{border-color:var(--edge2);background:var(--panel2)}
+.ba-note li{display:flex;gap:12px;font-size:16px;padding:6px 0}
+.ba-note .bad li::before{content:"\00D7";color:var(--muted);font-weight:500}
+.ba-note .ok li::before{content:"\2713";color:var(--mint);font-weight:500}
+.old{position:absolute;inset:0;background:#e9e2cf;font-family:'Times New Roman',serif;color:#222;display:flex;flex-direction:column;overflow:hidden}
+.old .o-top{background:#d11;color:#ff0;font:700 2.4cqw/1 Impact,'Arial Black',sans-serif;text-align:center;padding:1cqw}
+.old .o-nav{display:flex;flex-wrap:wrap;gap:.8cqw;background:#335;padding:.8cqw}
+.old .o-nav i{font:700 1.5cqw/1 Arial,sans-serif;font-style:normal;background:#fc0;color:#c00;padding:.6cqw 1cqw;border:1px solid #000}
+.old .o-body{display:flex;gap:1cqw;padding:1cqw;flex:1;min-height:0}
+.old .o-side{width:18%;display:flex;flex-direction:column;gap:.8cqw}
+.old .o-side i{flex:1;background:#0a8;border:2px dashed #f0f}
+.old .o-main{flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8cqw}
+.old .o-main i{background:linear-gradient(135deg,#f66,#69f);border:2px solid #000}
+.old .o-foot{background:#222;color:#0f0;font:1.5cqw/1 'Courier New',monospace;padding:.8cqw 1cqw}
+
+/* audit and final call to action */
+.audit{display:flex;flex-wrap:wrap;gap:56px 80px;align-items:center}
+.audit-l{flex:1 1 400px;min-width:0}
+.audit-f{flex:1 1 420px;min-width:0}
+.checks1{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;max-width:460px}
+.checks1 li{display:flex;align-items:center;gap:12px;color:var(--text);font-size:16px}
+.checks1 .ic{width:36px;height:36px}
+.checks1 .ic svg{width:18px;height:18px}
+.final{position:relative;overflow:hidden;isolation:isolate;border:1px solid var(--edge2);background:radial-gradient(ellipse 70% 120% at 50% 0%,rgba(40,190,130,.40),rgba(8,70,52,.35) 55%,rgba(3,20,15,.85) 100%);padding:clamp(48px,8vw,112px) clamp(24px,5vw,72px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:28px}
+.final .sw{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.final h2{font-size:clamp(40px,6vw,84px);line-height:1.02;max-width:900px}
+.final p{font-size:20px;max-width:600px;color:var(--body)}
+.final .btns{justify-content:center}
+@media (prefers-reduced-motion:reduce){.pcard,.ind svg{transition:none}.pcard:hover{transform:none}}
+
+/* services: categories, grid, detail */
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.cat{display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;padding:26px 24px;min-height:44px;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--edge2);cursor:pointer;color:var(--body);font:400 15px/1.5 var(--sans);transition:background .2s,border-color .2s,transform .2s}
+.cat:hover{background:var(--panel2);border-color:var(--edge2);transform:translateY(-2px)}
+.cat .cn{font:500 34px/1.05 var(--serif);color:var(--text)}
+.cat .cc{font:500 12px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+.cat[aria-pressed=true]{background:linear-gradient(165deg,rgba(91,227,158,.22),rgba(6,53,42,.6));border-color:var(--mint);border-top-color:var(--mint2);box-shadow:0 0 36px rgba(91,227,158,.16)}
+.cat[aria-pressed=true] .cn{color:var(--mint2)}
+.svc-panel{margin-top:32px}
+.svc-pop{animation:pop .38s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.svc-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:24px}
+.svc-head h2{font-size:clamp(34px,4vw,52px)}
+.svc-head p{max-width:520px;color:var(--muted);font-size:16px}
+.sgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.scard{display:flex;flex-direction:column;gap:14px;padding:30px 28px;background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);min-width:0}
+.scard h3{font-size:28px}
+.scard p{font-size:16px;color:var(--muted);flex:1}
+.scard .btn{align-self:flex-start;padding:14px 22px}
+.admin{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 48px;padding:clamp(24px,4vw,44px);background:linear-gradient(135deg,rgba(91,227,158,.14),rgba(6,53,42,.55));border:1px solid var(--edge2)}
+.admin .tx{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.admin h3{font-size:clamp(26px,3vw,38px)}
+.admin p{font-size:17px;color:var(--body)}
+.admin .ph2{font-size:14px;color:var(--muted)}
+.crumb{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:14px;color:var(--muted);align-items:center}
+.crumb a,.crumb button{color:var(--mint2);background:none;border:0;padding:0;font:inherit;cursor:pointer;text-decoration:underline;text-decoration-color:var(--mint);text-underline-offset:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:9px 12px;border:1px solid var(--edge2);color:var(--text);background:rgba(4,30,23,.6)}
+.sd{display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-start}
+.sd-main{flex:2 1 520px;min-width:0;display:flex;flex-direction:column;gap:56px}
+.sd-side{flex:1 1 320px;min-width:0;position:sticky;top:96px}
+.sd h2{font-size:clamp(28px,3vw,38px);margin-bottom:18px}
+.ticks li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:17px;color:var(--text)}
+.ticks li:last-child{border-bottom:1px solid var(--line)}
+.ticks li::before{content:"\2713";color:var(--mint);flex:0 0 auto}
+.hw{counter-reset:h}
+.hw li{counter-increment:h;display:flex;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.hw li:last-child{border-bottom:1px solid var(--line)}
+.hw li::before{content:counter(h,decimal-leading-zero);flex:0 0 52px;font:500 36px/1 var(--serif);color:var(--mint)}
+.hw h3{font-size:24px;margin-bottom:4px}
+.hw p{font-size:16px;color:var(--muted)}
+.tier{background:var(--panel2);border:1px solid var(--edge2);border-top:2px solid var(--mint);padding:30px 28px;display:flex;flex-direction:column;gap:18px}
+.tier dl{display:flex;flex-direction:column}
+.tier dl div{padding:12px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.tier dt{font:500 12px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mint)}
+.tier dd{margin:0;color:var(--text);font-size:17px}
+.tier .price{font:500 36px/1.1 var(--serif)}
+.tier .btn{width:100%}
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:1040px){.cats{grid-template-columns:repeat(2,minmax(0,1fr))}.rel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.sgrid,.rel{grid-template-columns:minmax(0,1fr)}.sd-side{position:static}}
+@media (max-width:460px){.cats{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.svc-pop{animation:none}.cat{transition:none}.cat:hover{transform:none}}
+
+/* booking */
+.bk{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:start}
+.bk-cal,.bk-side{background:var(--panel);border:1px solid var(--edge);border-top:2px solid var(--mint);padding:clamp(20px,3vw,36px);min-width:0}
+.bk-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.bk-top h2{font-size:clamp(26px,3vw,36px);text-align:center;flex:1}
+.bk-nav{width:44px;height:44px;background:rgba(4,30,23,.5);border:1px solid var(--edge2);color:var(--text);font:400 24px/1 var(--sans);cursor:pointer}
+.bk-nav:hover:not(:disabled){background:rgba(91,227,158,.16);border-color:var(--mint)}
+.bk-nav:disabled{opacity:.35;cursor:default}
+.bk-wd,.bk-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.bk-wd span{text-align:center;font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:6px 0}
+.bk-d{min-height:46px;aspect-ratio:1;max-height:64px;background:rgba(4,30,23,.45);border:1px solid var(--line);color:var(--text);font:500 16px/1 var(--sans);cursor:pointer}
+.bk-d:hover:not(:disabled){border-color:var(--mint);background:rgba(91,227,158,.14)}
+.bk-d:disabled{color:var(--muted);opacity:.38;cursor:default;background:transparent;border-color:transparent}
+.bk-d[aria-pressed=true]{background:linear-gradient(135deg,#7DF3B5,#33C783);color:#03140F;border-color:transparent}
+.bk-d[aria-pressed=true]:hover:not(:disabled){background:linear-gradient(135deg,#7DF3B5,#33C783);color:#03140F}
+.bk-d.today{box-shadow:inset 0 0 0 1px var(--mint)}
+.bk-blank{visibility:hidden}
+.bk-side h3{font-size:clamp(26px,3vw,34px);margin-bottom:6px}
+.bk-slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin-top:18px}
+.bk-s{min-height:46px;background:rgba(4,30,23,.45);border:1px solid var(--edge2);color:var(--text);font:500 15px/1 var(--sans);cursor:pointer}
+.bk-s:hover:not(:disabled){background:rgba(91,227,158,.16);border-color:var(--mint)}
+.bk-s:disabled{opacity:.4;text-decoration:line-through;cursor:default;border-color:var(--line)}
+.bk-form{display:flex;flex-direction:column;gap:16px;margin-top:18px}
+.bk-form .fld{display:flex;flex-direction:column;gap:6px}
+.bk-chosen{padding:12px 14px;border:1px solid var(--edge2);background:rgba(91,227,158,.08);color:var(--text);font-size:16px}
+.bk-ok{display:flex;flex-direction:column;gap:14px}
+.bk-ok .tick{width:52px;height:52px;border-radius:50%;border:1px solid var(--mint);color:var(--mint);display:flex;align-items:center;justify-content:center;font-size:26px}
+.bk-err{padding:12px 14px;border:1px solid #E8A87C;background:rgba(232,168,124,.10);color:var(--text);font-size:15px}
+.bk-list{display:flex;flex-direction:column;gap:12px}
+.bk-row{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-start;justify-content:space-between;padding:18px 20px;background:var(--panel);border:1px solid var(--edge)}
+.bk-row>div{min-width:0;flex:1 1 280px;font-size:15px}
+.bk-row b{color:var(--text);font-weight:500;font-size:17px}
+.bk-row .btn{padding:12px 18px}
+@media (max-width:900px){.bk{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<div class="top">Now booking Q1 2027 projects <a href="#book">Book a call</a></div>
+
+<header class="hdr">
+<div class="wrap">
+<a class="logo" href="#home"><img src="arch-logo.png" alt="ARCH Ecommerce Solution" width="760" height="152"></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav class="menu" id="menu" aria-label="Main">
+<a class="nl" href="#services" data-nav="services">Services</a>
+<a class="nl" href="#work" data-nav="work">Work</a>
+<a class="nl" href="#process" data-nav="process">Process</a>
+<a class="nl" href="#about" data-nav="about">About</a>
+<a class="nl" href="#journal" data-nav="journal">Journal</a>
+<a class="btn btn-line" href="#book">Book a Strategy Call</a>
+</nav>
+</div>
+</header>
+
+<!-- HOME -->
+<main id="v-home">
+<section class="hero3d">
+<div id="stage" aria-hidden="true"></div>
+<div class="fb" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wash" aria-hidden="true"></div>
+<div class="hero-human hero-human-left" aria-hidden="true"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="" loading="eager"><div class="hero-human-tag"><b>Built together.</b>Strategy meets craft</div></div>
+<div class="hero-human" aria-hidden="true"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="" loading="eager"><div class="hero-human-tag"><b>Human first.</b>Commerce that connects</div></div>
+<div class="wrap h3-in">
+<span class="pill">Shopify growth partner</span>
+<h1>Shopify brands that look premium and <em>grow profitably.</em></h1>
+<p class="lead">We build the strategies, systems and customer experiences that make profitable ecommerce growth possible.</p>
+<div class="btns"><a class="btn btn-dark" href="#book">Book a Strategy Call</a><a class="btn btn-line" href="#work">View our work</a></div>
+<div class="proof"><span>Store design</span><span>Conversion</span><span>Acquisition</span><span>Retention</span></div>
+<div class="hero-live" aria-label="Animated sample ecommerce dashboard metrics"><div class="hero-live-label">LIVE DASHBOARD PREVIEW <span>· SAMPLE DATA</span></div><div class="hero-live-grid"><div class="hero-live-card"><span>Monthly sales</span><strong data-count="28450" data-prefix="$" data-suffix="">$0</strong><small>Store performance</small></div><div class="hero-live-card"><span>Conversion rate</span><strong data-count="48" data-decimals="1" data-suffix="%">0%</strong><small>Customer activity</small></div><div class="hero-live-card"><span>Orders today</span><strong data-count="326" data-suffix="">0</strong><small>Live order flow</small></div></div></div>
+</div>
+<div class="hero-fade" aria-hidden="true"></div>
+</section>
+
+<!-- 2. TRUST AND CREDIBILITY -->
+<section class="bg-pale sec-sm">
+<div class="wrap stack" style="gap:28px">
+<div class="eb eyr">Built for Shopify store owners</div>
+<ul class="trust">
+<li><span class="ic" data-ic="shield"></span>Shopify-focused expertise</li>
+<li><span class="ic" data-ic="code"></span>Store design and development</li>
+<li><span class="ic" data-ic="target"></span>Conversion-focused solutions</li>
+<li><span class="ic" data-ic="bolt"></span>Performance optimisation</li>
+<li><span class="ic" data-ic="lifebuoy"></span>Ongoing store support</li>
+</ul>
+<div>
+<div class="figs">
+<div><b>[XX]</b><div class="eb">Stores launched</div></div>
+<div><b>[XX]</b><div class="eb">Projects completed</div></div>
+<div><b>[$XX]</b><div class="eb">Revenue generated for clients</div></div>
+<div><b>[XX%]</b><div class="eb">Client satisfaction rate</div></div>
+</div>
+<p class="figs-note">Draft placeholders. Replace with verified figures as your portfolio grows, or delete this row.</p>
+</div>
+</div>
+</section>
+
+<!-- INDUSTRIES — moved directly after trust and before problems -->
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Industries we work with</div><h2>Shopify Solutions for <em>Ambitious Brands.</em></h2></div>
+<div class="g g3" id="industries"></div>
+</div>
+</section>
+
+
+<!-- 3. PROBLEMS -->
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">The problems we solve</div><h2>Your Store Has Potential. <em>Let's Unlock It.</em></h2><p>We understand the frustrations that hold Shopify stores back.</p></div>
+<div class="g g4">
+<div class="pcard"><span class="ic" data-ic="trend"></span><h3>Low Conversion Rates</h3><p>Visitors browse your store but don't complete purchases.</p></div>
+<div class="pcard"><span class="ic" data-ic="layout"></span><h3>Outdated Store Design</h3><p>Your storefront doesn't communicate the quality of your brand.</p></div>
+<div class="pcard"><span class="ic" data-ic="gauge"></span><h3>Poor Store Performance</h3><p>Slow pages and frustrating experiences can cost you customers.</p></div>
+<div class="pcard"><span class="ic" data-ic="cart"></span><h3>Checkout Friction</h3><p>Complicated shopping experiences make it harder for customers to buy.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 4. SERVICES -->
+<section class="bg-ivory sec">
+<div class="wrap stack" style="gap:56px">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px">
+<div class="sec-head"><div class="eb eyr">Our services</div><h2>Everything Your Shopify Store <em>Needs to Grow.</em></h2></div>
+<a class="lnk" href="#services">See the full service list</a>
+</div>
+<div class="g g3">
+<div class="pcard"><span class="ic" data-ic="palette"></span><h3>Shopify Store Design</h3><p>Beautiful, branded storefronts designed to build trust and encourage sales.</p></div>
+<div class="pcard"><span class="ic" data-ic="code"></span><h3>Shopify Development</h3><p>Custom functionality, theme customisation and tailored store experiences.</p></div>
+<div class="pcard"><span class="ic" data-ic="target"></span><h3>Conversion Rate Optimisation</h3><p>Improve product pages, navigation, user journeys and checkout experiences.</p></div>
+<div class="pcard"><span class="ic" data-ic="search"></span><h3>Shopify SEO</h3><p>Improve technical SEO, product discoverability and organic search visibility.</p></div>
+<div class="pcard"><span class="ic" data-ic="box"></span><h3>Product &amp; Store Setup</h3><p>Product uploads, collections, navigation, payments and shipping configuration.</p></div>
+<div class="pcard"><span class="ic" data-ic="lifebuoy"></span><h3>Store Maintenance &amp; Support</h3><p>Ongoing updates, troubleshooting, improvements and technical assistance.</p></div>
+</div>
+</div>
+</section>
+
+<!-- TECHNOLOGY & TOOLS -->
+<section class="bg-ivory sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Our technology and tools</div><h2>Powered by the Right <em>Ecommerce Technology.</em></h2><p>We work with trusted platforms and tools to build, market and measure better ecommerce experiences.</p></div>
+<div class="g g3s">
+<div class="tool"><div class="tool-logo"><img src="https://cdn.simpleicons.org/shopify/95BF47" alt="Shopify company logo" loading="lazy"></div><h3>Shopify</h3><p>The ecommerce platform we use to build and manage online stores.</p></div>
+<div class="tool"><div class="tool-logo"><img src="https://cdn.simpleicons.org/klaviyo/FFFFFF" alt="Klaviyo company logo" loading="lazy"></div><h3>Klaviyo</h3><p>Email and SMS marketing connected to your store and customer journeys.</p></div>
+<div class="tool"><div class="tool-logo"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="Google Analytics company logo" loading="lazy"></div><h3>Google Analytics</h3><p>Analytics and reporting to understand store traffic and customer behaviour.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 5. FEATURED PROJECTS -->
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:36px">
+<div class="sec-head"><div class="eb eyr">Featured Shopify stores</div><h2>Our Work. <em>Built for Real Brands.</em></h2><p>We are preparing a showcase of Shopify stores built by ARCH. Each featured project will link directly to the live store, with its industry and the work completed clearly explained.</p></div>
+<div class="ba-note" style="max-width:760px"><div class="eb">ARCH CLIENT SHOWCASE</div><p>Our client projects will appear here soon. Share your live store links and we’ll turn them into polished, image-led case study cards.</p></div>
+</div>
+</section>
+
+<!-- 6. WHY ARCH -->
+<section class="bg-ivory sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Why choose ARCH?</div><h2>More Than Store Design. <em>We Build for Growth.</em></h2></div>
+<div class="g g3">
+<div class="pcard"><span class="ic" data-ic="shield"></span><h3>Shopify Specialisation</h3><p>Focused expertise in the Shopify ecosystem.</p></div>
+<div class="pcard"><span class="ic" data-ic="compass"></span><h3>Strategic Thinking</h3><p>Every solution begins with understanding the business.</p></div>
+<div class="pcard"><span class="ic" data-ic="target"></span><h3>Conversion-Focused Design</h3><p>Prioritising usability and purchase journeys.</p></div>
+<div class="pcard"><span class="ic" data-ic="sliders"></span><h3>Tailored Solutions</h3><p>No unnecessary one-size-fits-all approach.</p></div>
+<div class="pcard"><span class="ic" data-ic="bolt"></span><h3>Performance Mindset</h3><p>Attention to speed, mobile experience and functionality.</p></div>
+<div class="pcard"><span class="ic" data-ic="people"></span><h3>Long-Term Partnership</h3><p>Support beyond the initial store launch.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 7. PROCESS -->
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Our process</div><h2>A Clear Process. <em>A Better Store.</em></h2></div>
+<ol class="proc">
+<li><span class="pn">01</span><div><h3>Discovery</h3><p>We learn about your brand, business goals, customers and challenges.</p></div></li>
+<li><span class="pn">02</span><div><h3>Strategy</h3><p>We define the structure, features and approach your store needs.</p></div></li>
+<li><span class="pn">03</span><div><h3>Design</h3><p>We create a professional storefront experience aligned with your brand.</p></div></li>
+<li><span class="pn">04</span><div><h3>Development &amp; Launch</h3><p>We build, test and prepare your Shopify store for launch.</p></div></li>
+<li><span class="pn">05</span><div><h3>Optimisation &amp; Support</h3><p>We help you maintain, improve and develop your store over time.</p></div></li>
+</ol>
+</div>
+</section>
+
+<!-- 8. TRANSFORMATION -->
+<section class="bg-pale sec">
+<div class="wrap stack" style="gap:48px">
+<div class="sec-head"><div class="eb eyr">Shopify store transformation · Real case study</div><h2>Gymshark: From Platform Pressure to <em>Shopify Plus.</em></h2><p>A documented ecommerce migration—not a made-up redesign. Shopify's published case study explains the challenges Gymshark faced on Adobe Commerce and its move to Shopify Plus.</p></div>
+<div class="ba-wrap">
+<div class="ba-view" id="ba-view" role="group" aria-label="Drag the slider to compare an illustrative legacy storefront with the Shopify Plus case-study storefront">
+<div class="ba-after" id="ba-after"><img src="https://cdn.shopify.com/s/files/1/0693/0215/7334/files/gymshark.caseStudy01.png?v=1714426351" alt="Gymshark Shopify Plus storefront from Shopify's published case study" loading="lazy"></div>
+<div class="ba-before" id="ba-before"><div class="old" aria-hidden="true"><div class="o-top">SPORTSWEAR · PERFORMANCE · TRAINING</div><div class="o-nav"><i>HOME</i><i>MEN</i><i>WOMEN</i><i>NEW ARRIVALS</i><i>SALE</i></div><div class="o-body"><div class="o-side"><i></i><i></i><i></i></div><div class="o-main"><i></i><i></i><i></i><i></i></div></div><div class="o-foot">LEGACY STORE EXPERIENCE · ILLUSTRATIVE RECREATION</div></div></div>
+<span class="ba-tag l">BEFORE · LEGACY</span><span class="ba-tag r">AFTER · SHOPIFY PLUS</span><div class="ba-handle" id="ba-handle"></div>
+</div>
+<input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to reveal the before and after storefront">
+<div class="ba-captions"><span><b>Before</b> · Illustrative legacy-store visual</span><span><b>After</b> · Published Shopify case-study image</span></div>
+</div>
+<div class="g g2 gym-case">
+<article class="ba-note gym-before"><div class="eb" style="color:var(--muted)">BEFORE · ADOBE COMMERCE / MAGENTO</div><h3>Growth outpaced the old platform.</h3><ul class="bad"><li>The site build took six to eight months.</li><li>A Black Friday outage took the store offline for eight hours.</li><li>Gymshark estimated the outage cost at around £100,000.</li></ul><p class="note">These details are reported in Shopify's Gymshark case study.</p></article>
+<article class="ba-note good gym-after"><div class="eb">AFTER · SHOPIFY PLUS</div><h3>A platform built to scale with the brand.</h3><ul class="ok"><li>Replatformed to Shopify Plus.</li><li>Added Shopify POS for connected in-person and online experiences.</li><li>Customised checkout experiences with Shopify Scripts.</li></ul><a class="lnk" href="https://www.gymshark.com/" target="_blank" rel="noopener noreferrer">Visit Gymshark's live store</a></article>
+</div>
+<div class="ba-note"><div class="eb">THE TAKEAWAY</div><p>For growing brands, the right ecommerce platform is more than a storefront—it needs to support peak traffic, flexible customer experiences and international growth.</p><a class="lnk" href="https://www.shopify.com/in-te/case-studies/gymshark" target="_blank" rel="noopener noreferrer">Read Shopify's original Gymshark case study</a></div>
+<p class="note">ARCH is not claiming this as its own client work. This is a publicly documented Shopify migration case study, presented as an example of real-world ecommerce transformation.</p>
+</div>
+</section>
+
+<!-- 11. COMMITMENT -->
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Our commitment to every project</div><h2>Trusted to Build Better <em>Ecommerce Experiences.</em></h2></div>
+<div class="g g4">
+<div class="pcard"><span class="ic" data-ic="chat"></span><h3>Clear communication</h3><p>You always know what we are working on and what comes next.</p></div>
+<div class="pcard"><span class="ic" data-ic="eye"></span><h3>Honest recommendations</h3><p>We suggest what your store needs, not the biggest scope.</p></div>
+<div class="pcard"><span class="ic" data-ic="sparkle"></span><h3>Careful craft</h3><p>Every page is designed, built and tested before it goes live.</p></div>
+<div class="pcard"><span class="ic" data-ic="lifebuoy"></span><h3>Support after launch</h3><p>We stay available once your store is live.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 12. RESULTS -->
+<section class="bg-ivory sec">
+<div class="wrap split">
+<div class="col-head"><div class="eb eyr">Results and business impact</div><h2>Built Around What Matters <em>to Your Business.</em></h2><p style="font-size:18px">These are the outcomes our services are designed to support. They are not guaranteed results, and client metrics will appear here as projects are completed.</p></div>
+<ul class="col-body checks" style="flex:1.6 1 520px">
+<li><span class="ic" data-ic="check"></span><div><h3>Better shopping experiences</h3><p>Clear layouts and journeys that make products easy to find and understand.</p></div></li>
+<li><span class="ic" data-ic="check"></span><div><h3>Improved mobile usability</h3><p>Storefronts designed and tested for the phones most shoppers use.</p></div></li>
+<li><span class="ic" data-ic="check"></span><div><h3>Stronger brand presentation</h3><p>A storefront that reflects the quality of your products.</p></div></li>
+<li><span class="ic" data-ic="check"></span><div><h3>More efficient store management</h3><p>Organised catalogues, collections and settings that are easier to maintain.</p></div></li>
+<li><span class="ic" data-ic="check"></span><div><h3>Reduced checkout friction</h3><p>Fewer obstacles between a shopper's cart and a completed order.</p></div></li>
+<li><span class="ic" data-ic="check"></span><div><h3>Better opportunities for conversion</h3><p>Pages and journeys built to turn interest into purchases.</p></div></li>
+</ul>
+</div>
+</section>
+
+<!-- 13. FAQ -->
+<section class="bg-cream sec">
+<div class="wrap split">
+<div class="col-head"><div class="eb eyr">Frequently asked questions</div><h2>Questions? <em>We've Got Answers.</em></h2></div>
+<div class="col-body" style="flex:1.5 1 480px">
+<details><summary>What services does ARCH Ecommerce Solution offer?</summary><p>Shopify store design, Shopify development, conversion rate optimisation, Shopify SEO, product and store setup, and ongoing store maintenance and support.</p></details>
+<details><summary>Do you only work with Shopify stores?</summary><p>Our focus is Shopify, and that is where we do our best work. If you are unsure whether Shopify is right for you, ask us on a consultation.</p></details>
+<details><summary>Can you redesign my existing Shopify store?</summary><p>Yes. We review your current store, keep what works and redesign what does not, so the result suits your brand and your customers.</p></details>
+<details><summary>Can you build a Shopify store from scratch?</summary><p>Yes. We handle the structure, design, development, product setup and launch.</p></details>
+<details><summary>Do you offer custom Shopify development?</summary><p>Yes. That includes theme customisation, custom functionality and tailored store experiences.</p></details>
+<details><summary>Can you improve my store's conversion rate?</summary><p>We can improve the things that influence it: product pages, navigation, user journeys, speed and checkout. We do not promise a specific increase, because results depend on your products, traffic and market.</p></details>
+<details><summary>Do you work with international clients?</summary><p>Yes. We work with Shopify store owners remotely, whichever country they are in.</p></details>
+<details><summary>How long does a Shopify project take?</summary><p>It depends on the scope. A focused setup takes less time than a full redesign with custom development. After a discovery conversation we give you a clear timeline.</p></details>
+<details><summary>Do you provide ongoing maintenance?</summary><p>Yes. Store maintenance and support covers updates, troubleshooting, improvements and technical assistance after launch.</p></details>
+<details><summary>How do I get started?</summary><p>Request a free store audit or book a consultation. We will learn about your store and goals, then recommend the next step.</p></details>
+</div>
+</div>
+</section>
+
+<!-- 14. FREE STORE AUDIT -->
+<section class="bg-navy sec">
+<div class="wrap audit">
+<div class="audit-l stack" style="gap:24px">
+<div class="eb eyr">Free store audit</div>
+<h2>Discover What's Holding Your <em>Shopify Store Back.</em></h2>
+<p style="font-size:19px">Get a fresh perspective on your Shopify store. We'll help identify opportunities to improve its design, user experience, performance and conversion journey.</p>
+<ul class="checks1">
+<li><span class="ic" data-ic="check"></span>Design</li>
+<li><span class="ic" data-ic="check"></span>User experience</li>
+<li><span class="ic" data-ic="check"></span>Performance</li>
+<li><span class="ic" data-ic="check"></span>Conversion journey</li>
+</ul>
+</div>
+<form class="formbox audit-f" id="audit-form" novalidate>
+<h2>Request a free store audit</h2>
+<div class="fld" style="flex:none"><label class="eb" for="a-url">Your store address</label><input class="fi" id="a-url" type="text" placeholder="yourstore.com" autocomplete="url"></div>
+<div class="frow">
+<div class="fld"><label class="eb" for="a-name">Name</label><input class="fi" id="a-name" type="text" autocomplete="name"></div>
+<div class="fld"><label class="eb" for="a-email">Email</label><input class="fi" id="a-email" type="email" autocomplete="email"></div>
+</div>
+<div class="fld" style="flex:none"><label class="eb" for="a-msg">What would you like us to look at? (optional)</label><textarea class="fi" id="a-msg" style="min-height:96px"></textarea></div>
+<button class="btn btn-dark" type="submit" style="align-self:flex-start">Request a Free Store Audit</button>
+<p class="status" id="audit-note" role="status" hidden>Preview only: this form is not connected yet, so nothing was sent.</p>
+</form>
+</div>
+</section>
+
+<!-- 15. FINAL CTA -->
+<section class="bg-cream sec">
+<div class="wrap">
+<div class="final">
+<svg class="sw" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 150C280 70 520 8 780 0" fill="none" stroke="rgba(91,227,158,.6)" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M0 210C300 120 540 50 860 0" fill="none" stroke="rgba(91,227,158,.25)" stroke-width="1.5" vector-effect="non-scaling-stroke"/><path d="M1200 360C900 450 700 500 420 520" fill="none" stroke="rgba(91,227,158,.6)" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M1200 300C940 400 740 470 520 520" fill="none" stroke="rgba(91,227,158,.25)" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+<div class="eb eyr">Let's talk</div>
+<h2>Ready to Build a <em>Better Shopify Store?</em></h2>
+<p>Whether you're launching a new store or improving an existing one, ARCH is ready to help you move forward.</p>
+<div class="btns"><a class="btn btn-dark" href="#contact">Start Your Project</a><a class="btn btn-line" href="#book">Book a Consultation</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- SERVICES -->
+<main id="v-services" hidden>
+<section class="bg-cream">
+<div class="wrap phead" style="padding-bottom:clamp(32px,4vw,56px)">
+<div class="eb eyr">Services</div>
+<h1>Four ways we help. <em>Pick one to explore.</em></h1>
+<p class="lead">Choose a category to see every service inside it. Each service has its own page showing what is included, how it works, how long it takes and what it costs.</p>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap" style="padding-bottom:clamp(40px,5vw,72px)">
+<div class="cats" id="cats" role="group" aria-label="Service categories"></div>
+<div class="svc-panel" id="svc-grid" aria-live="polite"></div>
+</div>
+</section>
+<section class="bg-pale sec-sm">
+<div class="wrap"><div class="admin" data-admin></div></div>
+</section>
+</main>
+
+<!-- SERVICE DETAIL -->
+<main id="v-service" hidden>
+<div id="svc-detail"></div>
+</main>
+
+<!-- WORK -->
+<main id="v-work" hidden>
+<section class="bg-cream">
+<div class="wrap phead">
+<div class="eb eyr">Selected work</div>
+<h1>Results reported <em>against a baseline.</em></h1>
+<p class="lead">Every case study shows where the store started, what changed and what happened next. We set measurable targets up front and never promise guaranteed lifts.</p>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap" style="padding-bottom:clamp(64px,9vw,120px)"><div class="tiles" id="tiles"></div></div>
+</section>
+<section class="bg-ivory sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Inside a case study</div><h2>What every project page <em>shows you.</em></h2></div>
+<div class="cols">
+<div><h3>The baseline</h3><p>Conversion rate, average order value, acquisition cost and repeat purchase rate before we started.</p></div>
+<div><h3>The scope</h3><p>Which of the twenty services we used for this store, and why those and not the others.</p></div>
+<div><h3>The change</h3><p>What we redesigned, tested or launched, shown with before and after screens.</p></div>
+<div><h3>The result</h3><p>Reported against the baseline, with the limits of attribution stated plainly. Attribution is directional, not perfect.</p></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- PROCESS -->
+<main id="v-process" hidden>
+<section class="bg-cream">
+<div class="wrap phead">
+<div class="eb eyr">Process</div>
+<h1>How we work, <em>step by step.</em></h1>
+<p class="lead">Four stages, each with a defined output. You always know what we are doing, what we need from you and what comes next.</p>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap">
+<div class="pstep">
+<div><span class="n">1</span><h2>Diagnose</h2></div>
+<div><div class="eb">What we do</div><ul><li>Audit the store and map the conversion funnel</li><li>Review user behavior with heatmaps and session recordings</li><li>Record baselines for your key metrics</li><li>Agree measurable targets with you</li></ul></div>
+<div><div class="eb">What you receive</div><p>A written audit, baseline figures for each metric and a short list of targets we agree together.</p></div>
+</div>
+<div class="pstep">
+<div><span class="n">2</span><h2>Design</h2></div>
+<div><div class="eb">What we do</div><ul><li>Design a premium, mobile-first storefront</li><li>Plan navigation and collection architecture</li><li>Design product pages that make buying straightforward</li><li>Shape the customer journey from first visit to checkout</li></ul></div>
+<div><div class="eb">What you receive</div><p>Designs for the pages that matter most, reviewed with you before anything is built.</p></div>
+</div>
+<div class="pstep">
+<div><span class="n">3</span><h2>Build</h2></div>
+<div><div class="eb">What we do</div><ul><li>Build and configure the store on Shopify</li><li>Optimize page speed and review Core Web Vitals</li><li>Set up tracking in GA4, Meta and Google, with your permission</li><li>Configure checkout, cart and express payment options</li></ul></div>
+<div><div class="eb">What you receive</div><p>A fast, tested store with tracking in place and a record of the permissions you have given.</p></div>
+</div>
+<div class="pstep">
+<div><span class="n">4</span><h2>Grow</h2></div>
+<div><div class="eb">What we do</div><ul><li>Run paid ads, email and SMS programs for the stage you are at</li><li>Test changes with A/B tests and measure the effect</li><li>Refine merchandising, bundles and offers</li><li>Review profitability, not only revenue</li></ul></div>
+<div><div class="eb">What you receive</div><p>Reporting against your baseline in plain language, with clear recommendations for what to do next.</p></div>
+</div>
+</div>
+</section>
+<section class="bg-ivory sec">
+<div class="wrap split">
+<div class="col-head">
+<div class="eb eyr">Measurement</div>
+<h2>The seven numbers we report on.</h2>
+<p style="font-size:18px;color:var(--muted)">Revenue is not profit. A growth plan has to track product costs, margin, ad spend, fulfillment, refunds and discounts alongside these.</p>
+</div>
+<dl class="col-body defs">
+<div><dt>Conversion rate</dt><dd>The percentage of store visitors who complete a purchase.</dd></div>
+<div><dt>Average order value</dt><dd>Average revenue per order (AOV).</dd></div>
+<div><dt>Customer acquisition cost</dt><dd>The cost to acquire a new customer (CAC).</dd></div>
+<div><dt>Customer lifetime value</dt><dd>The estimated value a customer generates over the relationship (LTV).</dd></div>
+<div><dt>Return on ad spend</dt><dd>Attributed revenue divided by advertising spend (ROAS). It is not the same as profit.</dd></div>
+<div><dt>Contribution margin</dt><dd>The revenue remaining after relevant variable costs.</dd></div>
+<div><dt>Repeat purchase rate</dt><dd>The share of customers who purchase more than once.</dd></div>
+</dl>
+</div>
+</section>
+<section class="bg-navy sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Commitments</div><h2>How we protect your store <em>and your customers.</em></h2></div>
+<div class="cols">
+<div><h3>No guarantees</h3><p>We do not promise guaranteed sales, rankings, ROAS or conversion lifts. We set baselines, define measurable targets and report results transparently.</p></div>
+<div><h3>Permission first</h3><p>We obtain the right permissions for customer data, email and SMS marketing, tracking and advertising, and follow privacy, consumer-protection and platform rules.</p></div>
+<div><h3>Clear dependencies</h3><p>Some capabilities depend on your Shopify plan, market availability, third-party apps, integrations and eligibility. We tell you early when they do.</p></div>
+<div><h3>A focused scope</h3><p>We begin with a focused set of services we can deliver well, and bring in specialist partners for complex technical, legal, tax, logistics or paid-media work.</p></div>
+</div>
+</div>
+</section>
+</main>
+
+
+<!-- ABOUT -->
+<main id="v-about" hidden>
+<section class="bg-cream">
+<div class="wrap phead" style="padding-bottom:clamp(56px,8vw,96px)">
+<div class="eb eyr">About</div>
+<h1>A growth partner, <em>not a list of services.</em></h1>
+<p class="lead">We work with Shopify brands that want a premium storefront and commercial discipline behind it. Our job is to diagnose first, build second and measure everything.</p>
+</div>
+</section>
+<section class="bg-ivory sec-sm">
+<div class="wrap split" style="gap:48px 96px">
+<div class="col-head"><div class="eb eyr">Our story</div><h2>Why this agency exists.</h2></div>
+<div class="col-body stack" style="gap:22px">
+<p style="font-size:19px">[Two or three sentences on why you started the agency and who you serve.]</p>
+<p style="font-size:19px">[One sentence on what you refuse to do, such as promising guaranteed results.]</p>
+<div class="pr-pair">
+<div><b>[YEAR]</b><div class="eb">Founded</div></div>
+<div><b>[NUMBER]</b><div class="eb">Stores served</div></div>
+<div><b>[MARKETS]</b><div class="eb">Where we work</div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-cream sec">
+<div class="wrap stack" style="gap:56px">
+<div class="sec-head"><div class="eb eyr">Principles</div><h2>Four rules we <em>work by.</em></h2></div>
+<div class="principles">
+<div><h3>Diagnosis before prescription</h3><p style="font-size:17px">We find out why visitors are not buying before we recommend a single change.</p></div>
+<div><h3>Profit, not only revenue</h3><p style="font-size:17px">Traffic and sales matter when the economics behind them hold up. We track margin, ad spend, fulfillment and refunds too.</p></div>
+<div><h3>Only what we deliver well</h3><p style="font-size:17px">We begin with a focused set of services and bring in specialists for complex technical, legal, tax, logistics or paid-media work.</p></div>
+<div><h3>Honest measurement</h3><p style="font-size:17px">Attribution is directional. We say what a number can and cannot tell you, and we never promise guaranteed lifts.</p></div>
+</div>
+</div>
+</section>
+<section class="bg-navy" style="padding-top:clamp(72px,10vw,120px);padding-bottom:clamp(72px,10vw,120px)">
+<div class="wrap stack" style="gap:36px">
+<div class="eb eyr">Our promise</div>
+<blockquote class="stmt" style="font-size:clamp(30px,4.2vw,54px)">Help Shopify brands attract better-fit customers, convert more shoppers, retain customers and <em>scale with stronger commercial discipline.</em></blockquote>
+</div>
+</section>
+<section class="bg-ivory sec">
+<div class="wrap stack" style="gap:40px">
+<div class="sec-head"><div class="eb eyr">A human-first partnership</div><h2>Good ecommerce starts with <em>good people.</em></h2><p>Behind every great storefront is a team that understands the people shopping, the people building and the business behind the brand.</p></div>
+<div class="team-feature"><div class="team-feature-photo"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1400&amp;q=88" alt="Creative ecommerce team collaborating around a laptop" loading="lazy" decoding="async"></div><div class="team-feature-copy"><div class="team-feature-kicker">The ARCH approach</div><h3>Collaborative by design. <em>Focused on your growth.</em></h3><p>We bring strategy, design and technical thinking together around your goals—keeping communication clear and every decision connected to the customer experience.</p><a class="lnk" href="#book">Let's talk about your store</a></div></div>
+</div>
+</section>
+</main>
+
+<!-- JOURNAL -->
+<main id="v-journal" hidden>
+<section class="bg-cream">
+<div class="wrap phead" style="padding-bottom:clamp(40px,5vw,64px)">
+<div class="eb eyr">Journal</div>
+<h1>Notes on <em>profitable growth.</em></h1>
+<p class="lead">Practical writing on conversion, acquisition, retention and the numbers behind them.</p>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap" style="padding-bottom:clamp(56px,7vw,96px)">
+<article class="feat">
+<div class="img"><span class="eb">[FEATURED IMAGE]</span></div>
+<div class="tx">
+<div class="eb">Featured · Conversion</div>
+<h2>Why more traffic is not the same as more profit</h2>
+<p style="font-size:17px">In an illustrative example, a store with 50,000 monthly visitors adds $36,000 in monthly revenue by lifting conversion rate and average order value, with no extra traffic. Here is the arithmetic, and why revenue is still not profit.</p>
+<div class="meta">[DATE] · [X] min read</div>
+</div>
+</article>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap stack" style="padding-bottom:clamp(64px,9vw,120px);gap:40px">
+<div class="eb eyr">Latest notes</div>
+<div class="posts" id="posts"></div>
+</div>
+</section>
+<section class="bg-navy sec-sm">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px 56px">
+<div class="stack" style="flex:1 1 400px;min-width:0;max-width:560px">
+<div class="eb eyr">Newsletter</div>
+<h2>Get new notes by email.</h2>
+<p style="font-size:17px">One practical note when we publish. No spam, and you can leave at any time.</p>
+</div>
+<form class="nlform" id="nl-form" novalidate>
+<label for="nl-email">Email address</label>
+<div class="frow">
+<input class="fi" id="nl-email" type="email" placeholder="you@yourstore.com" autocomplete="email">
+<button class="btn btn-gold" type="submit">Subscribe</button>
+</div>
+<p class="status" id="nl-note" role="status" hidden style="color:var(--text)">Preview only: this form is not connected yet, so nothing was sent.</p>
+</form>
+</div>
+</section>
+</main>
+
+<!-- CONTACT -->
+<main id="v-contact" hidden>
+<section class="bg-cream">
+<div class="wrap contact" style="padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(64px,9vw,120px)">
+<div class="contact-l">
+<div class="stack" style="gap:24px">
+<div class="eb eyr">Contact</div>
+<h1>Book a <em>Strategy Call.</em></h1>
+<p style="font-size:19px">Tell us about your store and what you want to change. We will recommend the services that fit your stage.</p>
+</div>
+<div>
+<div class="eb" style="margin-bottom:10px">What happens next</div>
+<ol class="next">
+<li><span class="n">1</span><span>You send the form with your store address and your main goal.</span></li>
+<li><span class="n">2</span><span>We look at your store and reply with times for a call.</span></li>
+<li><span class="n">3</span><span>On the call we agree which numbers to move first and which services fit.</span></li>
+</ol>
+</div>
+<div class="stack" style="gap:10px">
+<div class="eb">Prefer to pick a time now?</div>
+<a class="btn btn-gold" href="#book" style="align-self:flex-start">Open the booking calendar</a>
+</div>
+<div class="stack" style="gap:6px;font-size:16px">
+<div class="eb" style="margin-bottom:6px">Direct</div>
+<span>[YOUR EMAIL]</span><span>[CITY, COUNTRY]</span><span>[YOUR HOURS AND TIME ZONE]</span>
+</div>
+</div>
+<div class="contact-r">
+<form class="formbox" id="contact-form">
+<h2>Tell us about your store</h2>
+<div class="frow">
+<div class="fld"><label class="eb" for="f-name">Name</label><input class="fi" id="f-name" type="text" autocomplete="name" required></div>
+<div class="fld"><label class="eb" for="f-email">Email</label><input class="fi" id="f-email" type="email" autocomplete="email" required></div>
+</div>
+<div class="fld" style="flex:none"><label class="eb" for="f-url">Store address</label><input class="fi" id="f-url" type="text" placeholder="yourstore.com"></div>
+<div class="frow">
+<div class="fld"><label class="eb" for="f-rev">Monthly revenue</label>
+<select class="fi" id="f-rev"><option>Pre-launch</option><option>Under $10,000</option><option>$10,000 to $50,000</option><option>$50,000 to $250,000</option><option>Over $250,000</option></select></div>
+<div class="fld"><label class="eb" for="f-goal">Main goal</label>
+<select class="fi" id="f-goal"><option>Acquire more qualified buyers</option><option>Convert more visitors</option><option>Increase order value</option><option>Retain customers</option><option>Scale profitably</option><option>Not sure yet</option></select></div>
+</div>
+<div class="fld" style="flex:none"><label class="eb" for="f-msg">What would you like to change?</label><textarea class="fi" id="f-msg"></textarea></div>
+<div class="consent"><input id="f-consent" type="checkbox" required><label for="f-consent">I agree to be contacted about this request.</label></div>
+<button class="btn btn-dark" type="submit" style="align-self:flex-start">Send request</button>
+<p class="status" id="contact-note" role="status" hidden>Preview only: this form is not connected yet, so nothing was sent.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- BOOK -->
+<main id="v-book" hidden>
+<section class="bg-cream">
+<div class="wrap phead" style="padding-bottom:clamp(32px,4vw,56px)">
+<div class="eb eyr">Book</div>
+<h1>Book a <em>Strategy Call.</em></h1>
+<p class="lead">Pick a day and a time. It is a 30-minute call about your store: what is holding it back and which services fit. The calendar is live, so a time someone else has booked disappears for everyone.</p>
+</div>
+</section>
+<section class="bg-cream">
+<div class="wrap" style="padding-bottom:clamp(56px,7vw,96px)">
+<div class="bk">
+<div class="bk-cal">
+<div class="bk-top"><button type="button" class="bk-nav" id="bk-prev" aria-label="Previous month">&lsaquo;</button><h2 id="bk-title"></h2><button type="button" class="bk-nav" id="bk-next" aria-label="Next month">&rsaquo;</button></div>
+<div class="bk-wd" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+<div class="bk-days" id="bk-days" role="group" aria-label="Choose a day"></div>
+<p class="note" id="bk-tz" style="margin-top:14px"></p>
+<p class="status" id="bk-live" role="status" hidden></p>
+</div>
+<div class="bk-side" id="bk-side" aria-live="polite"></div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- SHARED CALL TO ACTION -->
+<section class="bg-pale" id="cta" hidden>
+<div class="wrap sec-sm cta-in">
+<div class="stack"><h2 id="cta-h"></h2><p id="cta-p"></p></div>
+<div class="btns"><a class="btn btn-dark" id="cta-a" href="#book"></a><a class="btn btn-line" id="cta-b" href="#contact"></a></div>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap top-f">
+<div class="brand"><a class="logo" href="#home"><img src="arch-logo-full.png" alt="ARCH Ecommerce Solution" width="1100" height="268"></a><p>We build the strategies, systems and customer experiences that make profitable ecommerce growth possible.</p></div>
+<div>
+<h4>Services</h4>
+<button class="linkbtn" type="button" data-goto-group="design">Design</button>
+<button class="linkbtn" type="button" data-goto-group="marketing">Marketing</button>
+<button class="linkbtn" type="button" data-goto-group="optimization">Optimization</button>
+<button class="linkbtn" type="button" data-goto-group="management">Management</button>
+</div>
+<div style="flex:1 1 140px">
+<h4>Company</h4>
+<a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#journal">Journal</a><a href="#contact">Contact</a>
+</div>
+<div style="flex:1 1 180px">
+<h4>Contact</h4>
+<span>[YOUR EMAIL]</span><span>[CITY, COUNTRY]</span><span>[INSTAGRAM] · [LINKEDIN]</span>
+</div>
+</div>
+<div class="wrap">
+<div class="bot"><span>© 2026 ARCH Ecommerce Solution. All rights reserved.</span><span class="lg"><span>Privacy policy</span><span>Terms of service</span><span>Refund policy</span></span></div>
+</div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var nodes=document.querySelectorAll('[data-count]');
+  if(!nodes.length)return;
+  var started=false;
+  function run(){if(started)return;started=true;nodes.forEach(function(el){
+    var target=Number(el.getAttribute('data-count'))||0;
+    var decimals=Number(el.getAttribute('data-decimals'))||0;
+    var prefix=el.getAttribute('data-prefix')||'';
+    var suffix=el.getAttribute('data-suffix')||'';
+    var start=performance.now(),duration=2200;
+    function tick(now){var t=Math.min(1,(now-start)/duration);var eased=1-Math.pow(1-t,3);var value=target*eased;
+      var formatted=value.toLocaleString(undefined,{minimumFractionDigits:decimals,maximumFractionDigits:decimals});
+      el.textContent=prefix+formatted+suffix;if(t<1)requestAnimationFrame(tick);
+    }requestAnimationFrame(tick);
+  });}
+  if('IntersectionObserver' in window){var hero=document.querySelector('.hero3d');var io=new IntersectionObserver(function(entries){if(entries.some(function(e){return e.isIntersecting;})){run();io.disconnect();}},{threshold:.2});if(hero)io.observe(hero);else run();}else run();
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+'use strict';
+var host = document.getElementById('stage');
+if (!host) { return; }
+var heroSec = host.parentNode;
+if (!window.THREE) { heroSec.classList.add('no3d'); return; }
+var reduce = false;
+try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+try {
+var W = host.clientWidth || 1200, H = host.clientHeight || 700;
+var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+renderer.setSize(W, H);
+renderer.setClearColor(0x000000, 0);
+host.appendChild(renderer.domElement);
+
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(55, W / H, 0.1, 100);
+camera.position.set(0, 0, 18);
+
+function seeded(seed) { var s = seed; return function () { s = (s * 1664525 + 1013904223) % 4294967296; return s / 4294967296; }; }
+
+function makeTexture(seed) {
+var rnd = seeded(seed);
+var c = document.createElement('canvas'); c.width = 768; c.height = 440;
+var x = c.getContext('2d');
+function rr(a, b, w, h, r) { x.beginPath(); if (x.roundRect) { x.roundRect(a, b, w, h, r); } else { x.rect(a, b, w, h); } }
+
+x.save(); x.shadowColor = 'rgba(70,255,160,.5)'; x.shadowBlur = 40; x.shadowOffsetY = 0;
+var gr = x.createLinearGradient(30, 22, 738, 412); gr.addColorStop(0, '#13705A'); gr.addColorStop(1, '#04180F');
+x.fillStyle = gr; rr(30, 22, 708, 390, 22); x.fill(); x.restore();
+x.strokeStyle = 'rgba(120,245,180,.8)'; x.lineWidth = 3; rr(30, 22, 708, 390, 22); x.stroke();
+
+x.fillStyle = '#5BE39E'; x.beginPath(); x.arc(78, 70, 14, 0, Math.PI * 2); x.fill();
+x.fillStyle = 'rgba(255,255,255,.6)'; rr(106, 58, 150, 11, 5); x.fill();
+x.fillStyle = 'rgba(255,255,255,.26)'; rr(106, 78, 96, 7, 3); x.fill();
+x.fillStyle = '#E8FFF1'; x.font = '600 23px Arial'; x.fillText('STORE OVERVIEW', 106, 48);
+x.fillStyle = '#B9F7D2'; x.font = '600 25px Arial'; x.fillText('SALES  $12,480', 78, 146);
+x.fillStyle = 'rgba(255,255,255,.58)'; x.font = '16px Arial'; x.fillText('ORDERS  326   ·   CONVERSION  4.8%', 78, 174);
+for (var k = 0; k < 3; k++) { x.fillStyle = k === 2 ? '#5BE39E' : 'rgba(255,255,255,.15)'; rr(560 + k * 58, 56, 48, 26, 13); x.fill(); }
+x.strokeStyle = 'rgba(255,255,255,.14)'; x.lineWidth = 2; x.beginPath(); x.moveTo(58, 108); x.lineTo(710, 108); x.stroke();
+
+x.fillStyle = 'rgba(91,227,158,.08)'; rr(58, 128, 410, 250, 14); x.fill();
+x.strokeStyle = 'rgba(255,255,255,.10)'; x.lineWidth = 1;
+for (var g = 0; g < 5; g++) { x.beginPath(); x.moveTo(74, 160 + g * 46); x.lineTo(452, 160 + g * 46); x.stroke(); }
+var pts = [], px = 80, py = 340;
+pts.push([px, py]);
+for (var i = 0; i < 8; i++) { px += 48; py -= 10 + rnd() * 20; py = Math.max(160, py); pts.push([px, py]); }
+var lastP = pts[pts.length - 1];
+x.beginPath(); x.moveTo(pts[0][0], pts[0][1]);
+pts.forEach(function (p) { x.lineTo(p[0], p[1]); });
+x.lineTo(lastP[0], 356); x.lineTo(pts[0][0], 356); x.closePath();
+var area = x.createLinearGradient(0, 150, 0, 356);
+area.addColorStop(0, 'rgba(91,227,158,.40)'); area.addColorStop(1, 'rgba(91,227,158,0)');
+x.fillStyle = area; x.fill();
+x.beginPath();
+pts.forEach(function (p, j) { if (j === 0) { x.moveTo(p[0], p[1]); } else { x.lineTo(p[0], p[1]); } });
+x.strokeStyle = '#6DF0AC'; x.lineWidth = 5; x.lineJoin = 'round';
+x.shadowColor = '#3DFF9A'; x.shadowBlur = 16; x.stroke(); x.shadowBlur = 0;
+x.fillStyle = '#C8FFE0'; x.beginPath(); x.arc(lastP[0], lastP[1], 10, 0, Math.PI * 2); x.fill();
+
+x.fillStyle = 'rgba(91,227,158,.08)'; rr(488, 128, 222, 250, 14); x.fill();
+for (var b = 0; b < 6; b++) {
+var bh = 50 + rnd() * 120;
+x.fillStyle = b === 5 ? '#9CFFC8' : 'rgba(91,227,158,' + (0.45 + rnd() * 0.4).toFixed(2) + ')';
+rr(508 + b * 32, 354 - bh, 20, bh, 5); x.fill();
+}
+
+var t = new THREE.CanvasTexture(c);
+t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+return t;
+}
+
+var textures = [];
+for (var s = 1; s <= 5; s++) { textures.push(makeTexture(s * 7919)); }
+
+var cards = [];
+var COUNT = W < 600 ? 10 : 22;
+
+function viewSize(z) {
+var depth = camera.position.z - z;
+var vh = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * depth;
+return { w: vh * camera.aspect, h: vh };
+}
+
+function place(g, fresh) {
+g.position.z = fresh ? -2 - Math.random() * 14 : -18 - Math.random() * 8;
+var v = viewSize(g.position.z);
+g.position.x = (Math.random() - 0.5) * v.w * 1.05;
+g.position.y = (Math.random() - 0.5) * v.h * 1.05;
+g.rotation.x = (Math.random() - 0.5) * 0.5;
+g.rotation.y = (Math.random() - 0.5) * 0.8;
+g.rotation.z = (Math.random() - 0.5) * 0.3;
+g.userData.speed = 2 + Math.random() * 2.5;
+}
+
+for (var n = 0; n < COUNT; n++) {
+var w = 3.6 + Math.random() * 2.4;
+var mat = new THREE.MeshBasicMaterial({ map: textures[n % textures.length], transparent: true, opacity: 0.9, side: THREE.DoubleSide, depthWrite: false });
+var mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, w * 0.573), mat);
+var grp = new THREE.Group();
+grp.add(mesh);
+grp.userData = { speed: 2, vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.25, off: Math.random() * Math.PI * 2, base: 0.88 + Math.random() * 0.12 };
+place(grp, true);
+scene.add(grp);
+cards.push(grp);
+}
+
+var PC = 360, pp = new Float32Array(PC * 3);
+for (var p = 0; p < PC; p++) { pp[p * 3] = (Math.random() - 0.5) * 40; pp[p * 3 + 1] = (Math.random() - 0.5) * 24; pp[p * 3 + 2] = -Math.random() * 18; }
+var pg = new THREE.BufferGeometry();
+pg.setAttribute('position', new THREE.BufferAttribute(pp, 3));
+var dust = new THREE.Points(pg, new THREE.PointsMaterial({ color: 0x5BE39E, size: 0.06, transparent: true, opacity: 0.7, sizeAttenuation: true }));
+scene.add(dust);
+
+var mx = 0, my = 0, tx = 0, ty = 0;
+var heroEl = host.parentNode;
+heroEl.addEventListener('pointermove', function (e) {
+var r = heroEl.getBoundingClientRect();
+if (!r.width || !r.height) { return; }
+mx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+my = ((e.clientY - r.top) / r.height - 0.5) * 2;
+});
+heroEl.addEventListener('pointerleave', function () { mx = 0; my = 0; });
+
+var clock = new THREE.Clock();
+function frame(dt, time) {
+tx += (mx * 0.7 - tx) * 0.03;
+ty += (my * 0.5 - ty) * 0.03;
+camera.position.x = tx;
+camera.position.y = -ty;
+camera.lookAt(0, 0, 0);
+cards.forEach(function (g) {
+var d = g.userData;
+g.position.z += d.speed * dt;
+g.position.x += d.vx * dt;
+g.position.y += d.vy * dt + Math.sin(time + d.off) * 0.002;
+var dist = camera.position.z - g.position.z;
+g.children[0].material.opacity = Math.max(0, Math.min(1, (dist - 2) / 6)) * Math.max(0, Math.min(1, (40 - dist) / 14)) * d.base;
+if (g.position.z > 14) { place(g, false); g.children[0].material.opacity = 0; }
+});
+dust.rotation.y = Math.sin(time * 0.1) * 0.05;
+}
+
+function resize() {
+var w = host.clientWidth, h = host.clientHeight;
+if (!w || !h) { return; }
+camera.aspect = w / h;
+camera.updateProjectionMatrix();
+renderer.setSize(w, h);
+renderer.render(scene, camera);
+}
+if (window.ResizeObserver) { new ResizeObserver(resize).observe(host); } else { window.addEventListener('resize', resize); }
+
+if (reduce) {
+frame(0, 0);
+renderer.render(scene, camera);
+} else {
+(function loop() {
+requestAnimationFrame(loop);
+var dt = Math.min(clock.getDelta(), 0.05);
+if (!host.clientWidth) { return; }
+frame(dt, clock.elapsedTime);
+renderer.render(scene, camera);
+})();
+}
+} catch (err) {
+heroSec.classList.add('no3d');
+}
+})();
+</script>
+<script>
+(function () {
+'use strict';
+var VIEWS = ['home', 'services', 'work', 'process', 'book', 'about', 'journal', 'contact'];
+
+var CTA = {
+services: { h: 'Not sure which services fit your store?', p: 'Book a short call and we will recommend where to start, and leave out what you do not need.', a: 'Book a Strategy Call', ah: '#book', b: 'Contact us', bh: '#contact' },
+work: { h: 'Let us set your baseline.', p: 'A strategy call is the quickest way to find out which numbers to move first.', a: 'Book a Strategy Call', ah: '#book', b: 'Browse services', bh: '#services' },
+process: { h: 'Start with a diagnosis.', p: 'The first strategy call is where we agree which numbers to move and which services fit your stage.', a: 'Book a Strategy Call', ah: '#book', b: 'Browse services', bh: '#services' },
+about: { h: 'Let us talk about your store.', p: 'Book a strategy call and tell us where you are today. We will be direct about what we can and cannot help with.', a: 'Book a Strategy Call', ah: '#book', b: 'See our process', bh: '#process' }
+};
+
+var GROUPS = [
+{ id: 'A', range: 'Services 01 to 05', title: 'Store performance and conversion', blurb: 'These services improve the experience and commercial performance of the store, including the value generated from existing traffic.', items: [
+['01', 'Shopify Store Conversion Optimization (CRO)', 'Identify why visitors are not purchasing and improve the store experience to increase completed orders.', 'Conversion-funnel analysis, A/B testing, user-behavior analysis, landing-page improvements, purchase-journey optimization.', 'Increase conversion rate and revenue per visitor.'],
+['02', 'Premium Shopify Store Design & UX', 'Design or optimize the storefront so it feels credible, is easy to navigate and makes purchasing straightforward.', 'Premium storefront design, mobile-first optimization, navigation and collection architecture, product-page design, customer-journey improvements.', 'Build a trustworthy, easy-to-use shopping experience.'],
+['03', 'Ecommerce Speed & Technical Optimization', 'Improve technical performance and reduce avoidable friction across the storefront.', 'Page-speed optimization, Core Web Vitals review, image compression, app and script optimization, technical error resolution.', 'Improve usability and help protect conversions.'],
+['04', 'Checkout & Cart Optimization', 'Review the final purchase steps and reduce unnecessary obstacles that cause shoppers to abandon carts.', 'Checkout-friction analysis, shipping and payment transparency, cart-drawer optimization, express-checkout configuration, abandoned-checkout recovery.', 'Recover potential purchases and increase completed orders.'],
+['05', 'Product Merchandising & Revenue Optimization', 'Make products easier to discover and present relevant offers that can increase the value of each order.', 'Product bundling, upselling and cross-selling, product recommendations, volume discounts, collection arrangement, pricing and offer presentation.', 'Increase average order value (AOV).']
+] },
+{ id: 'B', range: 'Services 06 to 10', title: 'Acquisition and brand visibility', blurb: 'These services help stores attract qualified shoppers, build demand and create more consistent sources of traffic.', items: [
+['06', 'Meta Ads Management', 'Plan, launch and optimize Facebook and Instagram advertising campaigns.', 'Campaign strategy and management, audience testing, retargeting, budget optimization, performance reporting.', 'Acquire customers at sustainable costs.'],
+['07', 'Google Ads & Shopping Management', 'Reach shoppers who are actively searching for products or comparing purchase options.', 'Google Search Ads, Shopping campaigns, Performance Max where appropriate, Merchant Center optimization, remarketing.', 'Capture high-intent shoppers and generate sales.'],
+['08', 'Ecommerce SEO & Organic Growth', 'Improve a store’s visibility in search engines and attract relevant unpaid traffic.', 'Keyword research, product and collection SEO, technical SEO, content strategy, link building, organic traffic analysis.', 'Build sustainable organic discovery.'],
+['09', 'AI Search & Generative Engine Optimization (GEO)', 'Improve how clearly a brand and its products can be understood and surfaced by AI-powered search and discovery experiences.', 'Structured product information, product schema and structured data, merchant-feed quality, brand authority and citations, AI-search visibility monitoring.', 'Improve discoverability across emerging AI search experiences. Results and platform behavior can vary.'],
+['10', 'Influencer, UGC & Performance Creative', 'Develop creator-led and product-focused content that helps shoppers understand and trust a product.', 'Influencer partnerships, user-generated content, product demonstrations, testimonials, ad creative production, creator sourcing and management.', 'Build trust, create demand and test stronger advertising messages.']
+] },
+{ id: 'C', range: 'Services 11 to 15', title: 'Retention and revenue expansion', blurb: 'Retention services help merchants build stronger customer relationships and generate more value from existing buyers.', items: [
+['11', 'Email Marketing & Automation', 'Build lifecycle email systems that communicate with customers at useful moments before and after purchase.', 'Welcome sequences, abandoned-cart emails, browse-abandonment flows, post-purchase sequences, win-back campaigns, promotional newsletters.', 'Recover sales and encourage repeat purchases.'],
+['12', 'SMS & WhatsApp Marketing Automation', 'Use consent-based direct messaging for timely customer communication and relevant campaigns.', 'Abandoned-cart reminders, order updates, promotional campaigns, back-in-stock alerts, personalized offers, customer reactivation.', 'Increase engagement and repeat sales while respecting consent and messaging rules.'],
+['13', 'Customer Loyalty & VIP Programs', 'Create a rewards experience that recognizes repeat customers and gives them reasons to stay engaged.', 'Points and rewards, VIP membership tiers, referral rewards, exclusive customer benefits, loyalty campaigns.', 'Improve customer retention and lifetime value (LTV).'],
+['14', 'Subscription & Recurring Revenue Systems', 'Set up recurring-purchase models for products that customers naturally replenish or want delivered regularly.', 'Subscribe-and-save programs, replenishment subscriptions, membership models, recurring-billing configuration, subscription-retention strategies.', 'Create a more predictable recurring-revenue stream where the product category supports it.'],
+['15', 'Ecommerce Personalization & Customer Segmentation', 'Use customer behavior and purchase history to make experiences and marketing more relevant.', 'Behavioral segmentation, personalized product recommendations, purchase analysis, targeted offers, VIP customer targeting, personalized marketing journeys.', 'Improve relevance, conversion and customer value.']
+] },
+{ id: 'D', range: 'Services 16 to 20', title: 'Advanced growth and scaling', blurb: 'These capabilities become especially valuable for established stores with more complex data, operations, channels or geographic ambitions.', items: [
+['16', 'Ecommerce Analytics, Attribution & Profitability Intelligence', 'Give merchants a clearer view of marketing performance, customer economics and the costs behind revenue.', 'GA4 and Shopify analytics, Meta and Google tracking, conversion attribution, customer acquisition cost (CAC), contribution-margin analysis, LTV and ROAS reporting, executive dashboards.', 'Support better profit-focused decisions. Attribution is directional and should not be treated as perfect measurement.'],
+['17', 'Inventory, Demand Forecasting & Operations Optimization', 'Help merchants make better inventory and fulfillment decisions using sales patterns and operational data.', 'Demand forecasting, inventory planning, stockout prevention, overstock analysis, fulfillment workflow review, product performance analysis.', 'Protect working capital, reduce waste and improve fulfillment efficiency.'],
+['18', 'International Ecommerce Expansion', 'Prepare a Shopify business to sell in additional countries with an appropriate customer and operational experience.', 'International market research, multi-currency storefronts, localization and translation, international pricing strategy, shipping and duties configuration, localized campaigns.', 'Expand into suitable new markets with local requirements considered.'],
+['19', 'Omnichannel & Social Commerce Growth', 'Connect the brand’s sales and customer experience across relevant online and in-person channels.', 'TikTok Shop where available, Instagram and Facebook Shops, marketplace integration, Shopify POS integration, channel-specific campaigns, unified customer experiences.', 'Create more sales opportunities and reduce dependence on one channel.'],
+['20', 'AI-Powered Ecommerce Automation & Customer Experience', 'Use appropriate automation and AI tools to reduce repetitive work and improve customer service.', 'AI customer-support assistants, automated customer inquiries, order-tracking automation, AI-assisted product recommendations, workflow automation, customer-service integrations.', 'Improve operational efficiency and customer experience while supporting growth.']
+] }
+];
+
+var TILES = [
+['Store Design & UX · Conversion Optimization', '[+XX%]', 'conversion rate'],
+['Meta Ads Management · Performance Creative', '[X.X]', 'attributed ROAS'],
+['Email Automation · Loyalty & VIP Programs', '[+XX%]', 'repeat purchase rate'],
+['Ecommerce SEO · AI Search & GEO', '[+XX%]', 'organic traffic'],
+['Checkout & Cart Optimization · Merchandising', '[$XX]', 'average order value'],
+['International Expansion · Omnichannel Growth', '[XX%]', 'revenue from new markets']
+];
+
+var POSTS = [
+['Conversion', 'Where shoppers drop out of your checkout', 'A walk through shipping and payment transparency, cart drawers, express checkout and abandoned-checkout recovery.'],
+['Paid acquisition', 'Reading Meta and Google results without fooling yourself', 'ROAS is attributed revenue divided by ad spend. It is not profit, and attribution is only directional.'],
+['Retention', 'The lifecycle emails every Shopify store should have', 'Welcome, abandoned-cart, browse-abandonment, post-purchase and win-back flows, and what each one is for.'],
+['Search', 'Preparing your catalog for AI search', 'Structured product information, schema and merchant-feed quality, and why results can vary by platform.'],
+['Merchandising', 'Bundles, upsells and volume discounts that raise order value', 'How to present relevant offers that lift average order value without making the store feel cluttered.'],
+['Analytics', 'The seven numbers behind a healthy store', 'Conversion rate, AOV, CAC, LTV, ROAS, contribution margin and repeat purchase rate, in plain language.']
+];
+
+function esc(s) {
+return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function $(id) { return document.getElementById(id); }
+
+var CATS = [
+{ id: 'design', name: 'Design', blurb: 'Stores, creative and customer experiences that look credible and are easy to buy from.', ids: ['02','05','10','13','14'],
+  best: 'Stores that look dated, feel hard to navigate or need stronger creative.',
+  need: ['Access to your Shopify store', 'Your brand assets, such as logo, colours and product photography', 'A named person who can review and approve designs'],
+  steps: [['Brief and audit', 'We look at your store, customers and goals, then agree what to change and what to leave alone.'], ['Design', 'You review mock-ups of the key pages or assets before anything is built.'], ['Build and review', 'We implement it on Shopify, test it on mobile and desktop and make agreed revisions.'], ['Launch and handover', 'The work goes live and we walk you through what changed and how to look after it.']] },
+{ id: 'marketing', name: 'Marketing', blurb: 'Traffic, demand and repeat customers, from ads and search to email and messaging.', ids: ['06','07','08','09','11','12','19'],
+  best: 'Stores that need more qualified visitors or more repeat purchases.',
+  need: ['Access to your Shopify store and analytics', 'Permission for the ad accounts, email or SMS tools involved', 'Your offers, margins and any budget limits'],
+  steps: [['Set-up and tracking', 'We confirm permissions, check tracking and record baselines before spending or sending anything.'], ['Launch', 'The first campaigns, content or flows go live for your review.'], ['Test and refine', 'We test messages and audiences, keep what works and stop what does not.'], ['Report', 'You get plain-language reporting against the baseline, with clear next steps.']] },
+{ id: 'optimization', name: 'Optimization', blurb: 'Turn more of your existing traffic into orders, faster and with less friction.', ids: ['01','03','04','15'],
+  best: 'Stores that already get traffic but convert below their potential.',
+  need: ['Access to your Shopify store and analytics', 'Permission to use behaviour tools such as heatmaps, where relevant', 'Agreement on which pages we may test'],
+  steps: [['Baseline', 'We record conversion rate, order value and speed before changing anything.'], ['Prioritise', 'We rank fixes by likely impact and effort and agree the list with you.'], ['Implement and test', 'Changes are made and, where traffic allows, tested against the current version.'], ['Measure and report', 'We report the effect against the baseline, including what did not work.']] },
+{ id: 'management', name: 'Management', blurb: 'The data, operations and systems that keep a growing store running profitably.', ids: ['16','17','18','20'],
+  best: 'Established stores with more data, channels, markets or operations to manage.',
+  need: ['Access to your Shopify store, analytics and relevant operations data', 'A named contact for decisions and approvals', 'Clarity on your markets, costs and priorities'],
+  steps: [['Access and scoping', 'We confirm permissions, gather your data and agree what success looks like.'], ['Set-up', 'Dashboards, workflows or plans are built and checked with you.'], ['Run', 'We operate the system, flag issues and keep the data clean.'], ['Review', 'Regular reviews cover what changed, what it means and what to do next.']] }
+];
+var DUR = { '01': '4 to 8 weeks per optimization cycle', '02': '3 to 6 weeks', '03': '2 to 3 weeks', '04': '2 to 4 weeks', '05': '2 to 4 weeks', '06': 'Set-up in 1 to 2 weeks, then ongoing monthly', '07': 'Set-up in 1 to 2 weeks, then ongoing monthly', '08': 'Ongoing monthly. Organic results build over months', '09': 'Ongoing monthly. Results and platform behaviour vary', '10': '4 to 6 weeks per campaign', '11': 'Set-up in 2 to 4 weeks, then optional monthly', '12': 'Set-up in 2 to 3 weeks, then optional monthly', '13': '3 to 5 weeks', '14': '3 to 5 weeks', '15': '3 to 5 weeks', '16': 'Set-up in 2 to 4 weeks, then monthly reporting', '17': '4 to 6 weeks', '18': '6 to 10 weeks', '19': '4 to 8 weeks', '20': '4 to 8 weeks' };
+var SVC = [], SVC_BY_SLUG = {}, CAT_BY_ID = {};
+(function () {
+var byNum = {};
+GROUPS.forEach(function (g) { g.items.forEach(function (it) { byNum[it[0]] = it; }); });
+CATS.forEach(function (c) {
+CAT_BY_ID[c.id] = c;
+c.items = c.ids.map(function (n) {
+var it = byNum[n];
+var slug = 'service-' + it[1].toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60).replace(/-+$/, '');
+var inc = it[3].replace(/\.$/, '').split(', ').map(function (x) { return x.charAt(0).toUpperCase() + x.slice(1); });
+var o = { n: n, name: it[1], desc: it[2], inc: inc, obj: it[4], dur: DUR[n], slug: slug, cat: c };
+SVC.push(o); SVC_BY_SLUG[slug] = o;
+return o;
+});
+});
+})();
+
+function adminBox() {
+return '<div class="tx"><h3>Not sure this is the right choice?</h3><p>Don&rsquo;t know if this is the right choice? Call an admin and we&rsquo;ll help you pick the service that fits your store.</p><span class="ph2">Admin line: [ADMIN PHONE] &middot; [HOURS AND TIME ZONE]</span></div><a class="btn btn-gold" href="#book">Call an Admin</a>';
+}
+
+function renderCats() {
+var h = '';
+CATS.forEach(function (c) {
+h += '<button class="cat" type="button" data-filter="' + c.id + '" aria-pressed="false"><span class="cc">' + c.items.length + ' services</span><span class="cn">' + esc(c.name) + '</span><span>' + esc(c.blurb) + '</span></button>';
+});
+$('cats').innerHTML = h;
+}
+
+function renderGrid(c) {
+var h = '<div class="svc-pop"><div class="svc-head"><h2>' + esc(c.name) + '</h2><p>' + esc(c.blurb) + '</p></div><div class="sgrid">';
+c.items.forEach(function (o) {
+h += '<article class="scard"><h3>' + esc(o.name) + '</h3><p>' + esc(o.desc) + '</p><a class="btn btn-line" href="#' + o.slug + '">See more</a></article>';
+});
+h += '</div></div>';
+$('svc-grid').innerHTML = h;
+}
+
+function list(arr, cls) {
+return '<ul class="' + cls + '">' + arr.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+}
+
+function renderDetail(o) {
+var c = o.cat;
+var h = '<section class="bg-cream"><div class="wrap phead" style="padding-bottom:clamp(40px,5vw,64px)">';
+h += '<div class="crumb"><a href="#services">Services</a><span>/</span><button type="button" data-goto-group="' + c.id + '">' + esc(c.name) + '</button></div>';
+h += '<div class="eb eyr">' + esc(c.name) + '</div><h1>' + esc(o.name) + '</h1><p class="lead">' + esc(o.desc) + '</p>';
+h += '<div class="chips"><span class="chip">Basic Tier</span><span class="chip">' + esc(o.dur) + '</span></div>';
+h += '<div class="btns"><a class="btn btn-gold" href="#book">Start this service</a><a class="btn btn-line" href="#book">Call an Admin</a></div></div></section>';
+h += '<section class="bg-cream"><div class="wrap" style="padding-bottom:clamp(64px,9vw,112px)"><div class="sd"><div class="sd-main">';
+h += '<div><h2>What is included</h2>' + list(o.inc, 'ticks') + '</div>';
+h += '<div><h2>The goal</h2><p style="font-size:19px;color:var(--text)">' + esc(o.obj) + '</p></div>';
+h += '<div><h2>How it works</h2><ol class="hw">' + c.steps.map(function (st) { return '<li><div><h3>' + esc(st[0]) + '</h3><p>' + esc(st[1]) + '</p></div></li>'; }).join('') + '</ol></div>';
+h += '<div><h2>What we need from you</h2>' + list(c.need, 'ticks') + '</div>';
+h += '<div><h2>Good to know</h2>' + list(['We do not promise guaranteed sales, rankings or conversion lifts. We set baselines and report results against them.', 'We get the right permissions before touching customer data, tracking, advertising or messaging tools.', 'Some capabilities depend on your Shopify plan, market, apps and eligibility. We tell you early when they do.'], 'ticks') + '</div>';
+h += '<div><h2>Questions</h2><details><summary>Is there more than one tier?</summary><p>No. This service has one tier, the Basic Tier, which covers the core of the work described above.</p></details><details><summary>Can I combine it with other services?</summary><p>Yes. Many stores pair it with related services, and we will tell you if something else should come first.</p></details><details><summary>How do I know if it is right for me?</summary><p>Best for: ' + esc(c.best.charAt(0).toLowerCase() + c.best.slice(1)) + ' If you are unsure, an admin can talk it through with you.</p></details></div>';
+h += '</div><aside class="sd-side"><div class="tier"><div class="eb">Basic Tier</div><dl>';
+h += '<div><dt>Tier</dt><dd>Basic Tier (the only tier)</dd></div><div><dt>Typical duration</dt><dd>' + esc(o.dur) + '</dd></div><div><dt>Best for</dt><dd>' + esc(c.best) + '</dd></div><div><dt>Investment</dt><dd class="price">[YOUR PRICE]</dd></div>';
+h += '</dl><a class="btn btn-gold" href="#book">Start this service</a><a class="btn btn-line" href="#book">Call an Admin</a></div></aside></div></div></section>';
+var rel = c.items.filter(function (x) { return x !== o; }).slice(0, 3);
+if (rel.length) {
+h += '<section class="bg-ivory sec-sm"><div class="wrap stack" style="gap:32px"><h2 style="font-size:clamp(28px,3vw,38px)">More in ' + esc(c.name) + '</h2><div class="rel">';
+rel.forEach(function (x) { h += '<article class="scard"><h3>' + esc(x.name) + '</h3><p>' + esc(x.desc) + '</p><a class="btn btn-line" href="#' + x.slug + '">See more</a></article>'; });
+h += '</div></div></section>';
+}
+h += '<section class="bg-pale sec-sm"><div class="wrap"><div class="admin">' + adminBox() + '</div></div></section>';
+$('svc-detail').innerHTML = h;
+}
+
+function renderTiles() {
+var h = '';
+TILES.forEach(function (t) {
+h += '<article class="tile"><div class="shot"><div class="fr"><div class="nv"><i></i><i></i></div><div class="hr"><i></i></div><div class="pr"><i></i><i></i><i></i></div></div></div>';
+h += '<div class="stack" style="gap:10px"><div class="eb">[CATEGORY]</div><h3>[CLIENT NAME]</h3><p style="font-size:16px;color:var(--muted)">[ONE LINE ON THE BRIEF AND WHAT CHANGED]</p><p style="font-size:14px">' + esc(t[0]) + '</p>';
+h += '<div class="res"><b>' + esc(t[1]) + '</b><span>' + esc(t[2]) + '</span></div></div></article>';
+});
+$('tiles').innerHTML = h;
+}
+
+function renderPosts() {
+var h = '';
+POSTS.forEach(function (p) {
+h += '<article class="post"><div class="eb">' + esc(p[0]) + '</div><h3>' + esc(p[1]) + '</h3><p>' + esc(p[2]) + '</p><div class="meta">[DATE] · [X] min read</div></article>';
+});
+$('posts').innerHTML = h;
+}
+
+var current = 'home';
+var pendingGroup = null;
+
+function setGroup(g, scroll) {
+var c = CAT_BY_ID[g] || CATS[0];
+Array.prototype.forEach.call(document.querySelectorAll('[data-filter]'), function (b) {
+b.setAttribute('aria-pressed', b.getAttribute('data-filter') === c.id ? 'true' : 'false');
+});
+renderGrid(c);
+if (scroll) {
+var el = $('svc-grid');
+if (el && el.scrollIntoView) { el.scrollIntoView({ block: 'start' }); }
+}
+}
+
+function closeMenu() {
+$('menu').classList.remove('open');
+$('burger').setAttribute('aria-expanded', 'false');
+}
+
+function route() {
+var h = (location.hash || '').replace(/^#/, '');
+var sv = SVC_BY_SLUG[h] || null;
+var navKey = h;
+if (sv) { h = 'service'; navKey = 'services'; }
+else if (VIEWS.indexOf(h) < 0) { h = 'home'; navKey = 'home'; }
+current = h;
+VIEWS.concat(['service']).forEach(function (v) { $('v-' + v).hidden = (v !== h); });
+if (sv) { renderDetail(sv); }
+Array.prototype.forEach.call(document.querySelectorAll('[data-nav]'), function (a) {
+if (a.getAttribute('data-nav') === navKey) { a.setAttribute('aria-current', 'page'); } else { a.removeAttribute('aria-current'); }
+});
+var c = CTA[h === 'service' ? 'services' : h];
+$('cta').hidden = !c;
+if (c) {
+$('cta-h').textContent = c.h;
+$('cta-p').textContent = c.p;
+$('cta-a').textContent = c.a; $('cta-a').setAttribute('href', c.ah);
+$('cta-b').textContent = c.b; $('cta-b').setAttribute('href', c.bh);
+}
+closeMenu();
+window.scrollTo(0, 0);
+if ((h === 'services') && pendingGroup) {
+var g = pendingGroup; pendingGroup = null;
+setTimeout(function () { setGroup(g, true); }, 0);
+}
+}
+
+renderCats();
+renderTiles();
+renderPosts();
+setGroup('design', false);
+Array.prototype.forEach.call(document.querySelectorAll('[data-admin]'), function (el) { el.innerHTML = adminBox(); });
+
+document.addEventListener('click', function (e) {
+var f = e.target.closest ? e.target.closest('[data-filter]') : null;
+if (f) { setGroup(f.getAttribute('data-filter'), true); return; }
+var t = e.target.closest ? e.target.closest('[data-goto-group]') : null;
+if (t) {
+e.preventDefault();
+var g = t.getAttribute('data-goto-group');
+if (current === 'services') { setGroup(g, true); } else { pendingGroup = g; location.hash = 'services'; }
+}
+});
+
+$('burger').addEventListener('click', function () {
+var open = $('menu').classList.toggle('open');
+$('burger').setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+$('contact-form').addEventListener('submit', function (e) {
+e.preventDefault();
+$('contact-note').hidden = false;
+});
+$('nl-form').addEventListener('submit', function (e) {
+e.preventDefault();
+$('nl-note').hidden = false;
+});
+
+window.addEventListener('hashchange', route);
+route();
+})();
+</script>
+<script>
+(function () {
+'use strict';
+function $(id) { return document.getElementById(id); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+var IC = {
+shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z M9 12l2 2 4-4',
+code: 'M8 7l-5 5 5 5 M16 7l5 5-5 5 M14 4l-4 16',
+target: 'M12 3a9 9 0 100 18 9 9 0 000-18z M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z M12 11.2a.8.8 0 100 1.6.8.8 0 000-1.6z',
+bolt: 'M13 2L4 14h7l-1 8 9-12h-7z',
+lifebuoy: 'M12 3a9 9 0 100 18 9 9 0 000-18z M12 8a4 4 0 100 8 4 4 0 000-8z M5.6 5.6l3.2 3.2 M15.2 15.2l3.2 3.2 M18.4 5.6l-3.2 3.2 M8.8 15.2l-3.2 3.2',
+trend: 'M3 7l6 6 4-4 8 8 M17 17h4v-4',
+layout: 'M3 4h18v16H3z M3 9h18 M9 9v11',
+gauge: 'M4 18a8 8 0 1116 0 M12 18l4-6 M6 12l1 1 M18 12l-1 1 M12 6v1.5',
+cart: 'M3 4h3l2 11h10l2-8H7 M10 20h.01 M17 20h.01',
+palette: 'M12 3a9 9 0 100 18c1.5 0 2-1 1.5-2s0-2 1.5-2h2a3 3 0 003-3c0-6-3.5-11-8-11z M8 11h.01 M12 8h.01 M16 10h.01',
+search: 'M11 4a7 7 0 100 14 7 7 0 000-14z M21 21l-5-5',
+box: 'M3 8l9-5 9 5v8l-9 5-9-5z M3 8l9 5 9-5 M12 13v8',
+compass: 'M12 3a9 9 0 100 18 9 9 0 000-18z M15.5 8.5l-2 5-5 2 2-5z',
+sliders: 'M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M14 4v4 M8 10v4 M16 16v4',
+people: 'M9 6a5 5 0 100 10 5 5 0 000-10z M15 8a5 5 0 110 10 5 5 0 010-10z',
+store: 'M4 9l2-5h12l2 5 M4 9v11h16V9 M4 9h16 M10 20v-6h4v6',
+mail: 'M3 6h18v12H3z M3 7l9 7 9-7',
+chart: 'M4 20V4 M4 20h16 M8 16v-5 M12 16V8 M16 16v-3',
+chat: 'M4 5h16v11H9l-5 4z',
+eye: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z M12 9a3 3 0 100 6 3 3 0 000-6z',
+sparkle: 'M12 3l2.5 6 6.5.5-5 4.3 1.6 6.4L12 17l-5.6 3.2L8 13.8 3 9.5 9.5 9z',
+check: 'M12 3a9 9 0 100 18 9 9 0 000-18z M8 12l3 3 5-6'
+};
+
+function icon(p) {
+return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="' + p + '"/></svg>';
+}
+Array.prototype.forEach.call(document.querySelectorAll('[data-ic]'), function (el) {
+var p = IC[el.getAttribute('data-ic')];
+if (p) { el.innerHTML = icon(p); }
+});
+
+function art(inner) {
+return '<svg viewBox="0 0 400 260" aria-hidden="true" focusable="false">' + inner + '</svg>';
+}
+var M = '#5BE39E', M2 = '#8CF5BF', W = '#E4ECE8', S = '#CFE3D9';
+var ART = {
+fashion: art('<path d="M216 20c0-8 6-13 12-13s12 5 12 12c0 7-5 10-10 12v12" fill="none" stroke="' + W + '" stroke-width="4" stroke-linecap="round" transform="translate(-24 0)"/><path d="M192 56L116 102H288Z" fill="none" stroke="' + W + '" stroke-width="4" stroke-linejoin="round"/><path d="M178 108L170 150L132 244H276L238 150L230 108Z" fill="' + M + '" fill-opacity=".92"/><path d="M172 148H236" stroke="#03140F" stroke-width="4" stroke-opacity=".6"/><path d="M184 108q20 18 40 0" fill="none" stroke="#03140F" stroke-width="4" stroke-opacity=".6"/>'),
+beauty: art('<rect x="170" y="112" width="72" height="122" rx="14" fill="' + M + '" fill-opacity=".92"/><rect x="193" y="90" width="26" height="24" fill="' + W + '"/><rect x="196" y="48" width="20" height="44" rx="10" fill="' + S + '"/><rect x="182" y="152" width="48" height="40" rx="4" fill="#03140F" fill-opacity=".5"/><rect x="258" y="172" width="86" height="62" rx="10" fill="' + W + '" fill-opacity=".9"/><rect x="258" y="158" width="86" height="20" rx="6" fill="' + M2 + '"/><rect x="92" y="152" width="46" height="82" rx="10" transform="rotate(-8 115 193)" fill="#fff" fill-opacity=".6"/>'),
+electronics: art('<path d="M128 170a78 78 0 0 1 156 0" fill="none" stroke="' + W + '" stroke-width="12" stroke-linecap="round"/><rect x="110" y="160" width="38" height="68" rx="16" fill="' + M + '"/><rect x="264" y="160" width="38" height="68" rx="16" fill="' + M + '"/><rect x="316" y="118" width="52" height="108" rx="10" fill="none" stroke="' + S + '" stroke-width="5"/><path d="M332 210h20" stroke="' + S + '" stroke-width="4" stroke-linecap="round"/><circle cx="206" cy="196" r="22" fill="none" stroke="' + M2 + '" stroke-width="4" stroke-opacity=".8"/>'),
+home: art('<path d="M160 66H248L276 130H132Z" fill="' + W + '" fill-opacity=".92"/><rect x="199" y="130" width="10" height="86" fill="' + S + '"/><ellipse cx="204" cy="220" rx="46" ry="11" fill="' + M + '"/><path d="M300 232h42l-6-36h-30z" fill="#fff" fill-opacity=".7"/><path d="M322 196c-32-20-32-62-4-80 6 32 24 38 4 80z" fill="' + M + '"/><path d="M322 196c26-14 30-40 18-58-12 20-24 30-18 58z" fill="' + M2 + '" fill-opacity=".9"/>'),
+fitness: art('<rect x="130" y="96" width="150" height="14" rx="7" fill="' + S + '"/><rect x="110" y="64" width="26" height="78" rx="8" fill="' + M + '"/><rect x="88" y="76" width="18" height="54" rx="6" fill="' + M2 + '"/><rect x="274" y="64" width="26" height="78" rx="8" fill="' + M + '"/><rect x="304" y="76" width="18" height="54" rx="6" fill="' + M2 + '"/><path d="M178 196a30 30 0 0 1 60 0" fill="none" stroke="' + W + '" stroke-width="9" stroke-linecap="round"/><circle cx="208" cy="224" r="32" fill="' + W + '" fill-opacity=".9"/><circle cx="208" cy="224" r="12" fill="#03140F" fill-opacity=".35"/>'),
+lifestyle: art('<rect x="146" y="150" width="76" height="80" rx="10" fill="' + W + '" fill-opacity=".9"/><rect x="146" y="178" width="76" height="28" fill="#03140F" fill-opacity=".5"/><rect x="182" y="132" width="4" height="20" fill="' + S + '"/><path d="M184 86c-16 20-12 34 0 42 12-8 16-22 0-42z" fill="' + M2 + '"/><rect x="246" y="132" width="98" height="98" rx="6" fill="' + M + '"/><path d="M270 132v-16a26 26 0 0 1 52 0v16" fill="none" stroke="' + W + '" stroke-width="6"/>')
+};
+var HUE = {
+fashion: ['#0F6B50', '#052A21'],
+beauty: ['#0E6A5E', '#04251F'],
+electronics: ['#0B5F63', '#04222A'],
+home: ['#10683F', '#05240F'],
+fitness: ['#0C7050', '#03281C'],
+lifestyle: ['#176B55', '#06261F']
+};
+
+function mock(p) {
+var c = HUE[p.k];
+return '<div class="mock" style="--hA:' + c[0] + ';--hB:' + c[1] + '"><div class="mk-bar"><i></i><i></i><i></i><span></span></div><div class="mk-nav"><b>' + esc(p.name.toUpperCase()) + '</b><span><i></i><i></i><i></i></span></div><div class="mk-hero"><div class="tx"><b>' + esc(p.head) + '</b><i></i><i></i><u></u></div>' + ART[p.k] + '</div><div class="mk-grid"><i></i><i></i><i></i><i></i></div></div>';
+}
+
+var INDUSTRIES = [
+{ name: 'Fashion & Apparel', line: 'Lookbooks, size guides and seasonal collections.', image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85', alt: 'Fashion models browsing clothing on a retail rack' },
+{ name: 'Beauty & Skincare', line: 'Ingredient stories, bundles and routines.', image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1000&q=85', alt: 'Beauty and skincare products arranged for a product shoot' },
+{ name: 'Electronics', line: 'Specifications, comparisons and fast product pages.', image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=85', alt: 'Consumer electronics and devices displayed on a desk' },
+{ name: 'Home & Living', line: 'Large catalogues, collections and filtering.', image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85', alt: 'Modern living room interior with carefully styled furniture' },
+{ name: 'Health & Fitness', line: 'Bundles, programmes and repeat orders.', image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85', alt: 'Athlete training in a gym' }
+];
+
+/* Editorial photography for key service and problem cards */
+var cardPhotos = [
+'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85',
+'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85',
+'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85',
+'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=900&q=85',
+'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=900&q=85',
+'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85'
+];
+var serviceGrid = document.querySelectorAll('#v-home section');
+Array.prototype.forEach.call(serviceGrid, function (section) {
+  var head = section.querySelector('.sec-head .eb');
+  if (!head) return;
+  var label = (head.textContent || '').toLowerCase();
+  if (label !== 'our services' && label !== 'the problems we solve') return;
+  var cards = section.querySelectorAll('.pcard');
+  Array.prototype.forEach.call(cards, function (card, index) {
+    var img = document.createElement('div');
+    img.className = 'pcard-media';
+    var photo = document.createElement('img');
+    photo.src = cardPhotos[(index + (label === 'the problems we solve' ? 2 : 0)) % cardPhotos.length];
+    photo.alt = '';
+    photo.loading = 'lazy';
+    photo.decoding = 'async';
+    img.appendChild(photo);
+    card.insertBefore(img, card.firstChild);
+  });
+});
+
+var ind = $('industries');
+if (ind) {
+var ih = '';
+INDUSTRIES.forEach(function (d) {
+ih += '<article class="ind"><img src="' + esc(d.image) + '" alt="' + esc(d.alt) + '" loading="lazy" decoding="async"><div class="cap"><h3>' + esc(d.name) + '</h3><p>' + esc(d.line) + '</p></div></article>';
+});
+ind.innerHTML = ih;
+}
+
+/* before and after */
+var rng = $('ba-range'), bef = $('ba-before'), hd = $('ba-handle'), view = $('ba-view');
+function setPos(v) {
+v = Math.max(0, Math.min(100, v));
+if (bef) { bef.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; }
+if (hd) { hd.style.left = v + '%'; }
+if (rng) { rng.value = String(v); }
+}
+if (rng && view) {
+rng.addEventListener('input', function () { setPos(Number(rng.value)); });
+var drag = false;
+var move = function (e) {
+var r = view.getBoundingClientRect();
+if (!r.width) { return; }
+setPos((e.clientX - r.left) / r.width * 100);
+};
+view.addEventListener('pointerdown', function (e) {
+drag = true;
+if (view.setPointerCapture) { try { view.setPointerCapture(e.pointerId); } catch (err) {} }
+move(e);
+});
+view.addEventListener('pointermove', function (e) { if (drag) { move(e); } });
+view.addEventListener('pointerup', function () { drag = false; });
+view.addEventListener('pointercancel', function () { drag = false; });
+setPos(50);
+}
+
+/* audit form: preview only */
+var af = $('audit-form');
+if (af) {
+af.addEventListener('submit', function (e) {
+e.preventDefault();
+$('audit-note').hidden = false;
+});
+}
+})();
+</script>
+<script>
+(function () {
+'use strict';
+var TZ = 'America/Chicago', TZ_LABEL = 'Central Time (CT)';
+var OPEN_DAYS = [1, 2, 3, 4, 5], START = 9 * 60, END = 17 * 60, STEP = 30, LEAD = 120, WINDOW_DAYS = 60;
+var TOPICS = ['Design', 'Marketing', 'Optimization', 'Management', 'Not sure yet'];
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function $(id) { return document.getElementById(id); }
+function pad(n) { return (n < 10 ? '0' : '') + n; }
+function esc(x) { return String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+if (!$('bk-days')) { return; }
+
+function nowTz() {
+var p = {};
+new Intl.DateTimeFormat('en-US', { timeZone: TZ, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+return { y: +p.year, m: +p.month - 1, d: +p.day, mins: (+p.hour) * 60 + (+p.minute) };
+}
+function dkey(y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); }
+function dayNum(y, m, d) { return Math.round(Date.UTC(y, m, d) / 86400000); }
+function fmtTime(mins) { var h = Math.floor(mins / 60), mm = mins % 60; return ((h + 11) % 12 + 1) + ':' + pad(mm) + ' ' + (h < 12 ? 'AM' : 'PM'); }
+function fmtDate(k) {
+var a = k.split('-');
+return new Date(Date.UTC(+a[0], +a[1] - 1, +a[2])).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+function skey(dk, mins) { return dk + '-' + pad(Math.floor(mins / 60)) + pad(mins % 60); }
+
+var now = nowTz();
+var view = { y: now.y, m: now.m };
+var selDate = null, selSlot = null, done = null, errMsg = '', busy = false;
+var taken = {};
+var db = null, uid = null, isAdmin = false, live = false;
+
+function slotsFor(y, m, d) {
+var dk = dkey(y, m, d), out = [];
+var diff = dayNum(y, m, d) - dayNum(now.y, now.m, now.d);
+var wd = new Date(Date.UTC(y, m, d)).getUTCDay();
+if (OPEN_DAYS.indexOf(wd) < 0 || diff < 0 || diff > WINDOW_DAYS) { return out; }
+for (var t = START; t < END; t += STEP) {
+if (diff === 0 && t < now.mins + LEAD) { continue; }
+out.push({ mins: t, key: skey(dk, t), taken: !!taken[skey(dk, t)] });
+}
+return out;
+}
+
+function renderCal() {
+$('bk-title').textContent = MONTHS[view.m] + ' ' + view.y;
+var first = new Date(Date.UTC(view.y, view.m, 1)).getUTCDay();
+var lead = (first + 6) % 7;
+var dim = new Date(Date.UTC(view.y, view.m + 1, 0)).getUTCDate();
+var h = '';
+for (var i = 0; i < lead; i++) { h += '<span class="bk-blank"></span>'; }
+for (var d = 1; d <= dim; d++) {
+var sl = slotsFor(view.y, view.m, d);
+var free = sl.filter(function (x) { return !x.taken; }).length;
+var dk = dkey(view.y, view.m, d);
+var isToday = (view.y === now.y && view.m === now.m && d === now.d);
+h += '<button type="button" class="bk-d' + (isToday ? ' today' : '') + '" data-date="' + dk + '"' + (free ? '' : ' disabled') + ' aria-pressed="' + (selDate === dk ? 'true' : 'false') + '" aria-label="' + esc(fmtDate(dk) + (free ? ', ' + free + ' times free' : ', unavailable')) + '">' + d + '</button>';
+}
+$('bk-days').innerHTML = h;
+var curIdx = view.y * 12 + view.m, nowIdx = now.y * 12 + now.m;
+$('bk-prev').disabled = curIdx <= nowIdx;
+$('bk-next').disabled = curIdx >= nowIdx + 2;
+}
+
+function renderSide() {
+var el = $('bk-side'), h = '';
+if (done) {
+h = '<div class="bk-ok"><span class="tick" aria-hidden="true">&#10003;</span><h3>Your time is reserved</h3><div class="bk-chosen">' + esc(fmtDate(done.date)) + ' at ' + esc(fmtTime(done.mins)) + ' ' + esc(TZ_LABEL) + '</div><p>We will be in touch at <b style="color:var(--text)">' + esc(done.email) + '</b> to confirm the details. Need to change it? Reply to that message or use the contact form.</p><button type="button" class="btn btn-line" id="bk-again" style="align-self:flex-start">Book another time</button></div>';
+} else if (selSlot) {
+h = '<h3>Your details</h3><div class="bk-chosen">' + esc(fmtDate(selDate)) + ' at ' + esc(fmtTime(selSlot)) + ' ' + esc(TZ_LABEL) + '</div>';
+h += '<form class="bk-form" id="bk-form" novalidate>';
+h += '<div class="fld"><label class="eb" for="bk-name">Name</label><input class="fi" id="bk-name" type="text" autocomplete="name" required></div>';
+h += '<div class="fld"><label class="eb" for="bk-email">Email</label><input class="fi" id="bk-email" type="email" autocomplete="email" required></div>';
+h += '<div class="fld"><label class="eb" for="bk-url">Store address (optional)</label><input class="fi" id="bk-url" type="text" placeholder="yourstore.com"></div>';
+h += '<div class="fld"><label class="eb" for="bk-topic">What do you want to talk about?</label><select class="fi" id="bk-topic">' + TOPICS.map(function (t) { return '<option>' + t + '</option>'; }).join('') + '</select></div>';
+h += '<div class="fld"><label class="eb" for="bk-notes">Anything we should know? (optional)</label><textarea class="fi" id="bk-notes"></textarea></div>';
+h += '<div class="consent"><input id="bk-consent" type="checkbox"><label for="bk-consent">I agree to be contacted about this booking.</label></div>';
+if (errMsg) { h += '<p class="bk-err" role="alert">' + errMsg + '</p>'; }
+h += '<div class="btns"><button class="btn btn-gold" type="submit"' + (busy ? ' disabled' : '') + '>' + (busy ? 'Booking...' : 'Confirm booking') + '</button><button class="btn btn-line" type="button" id="bk-back">Change time</button></div></form>';
+} else if (selDate) {
+var a = selDate.split('-');
+var sl = slotsFor(+a[0], +a[1] - 1, +a[2]);
+h = '<h3>' + esc(fmtDate(selDate)) + '</h3><p class="note">Choose a time. All times are ' + esc(TZ_LABEL) + '. Crossed-out times are already booked.</p><div class="bk-slots">';
+sl.forEach(function (x) { h += '<button type="button" class="bk-s" data-slot="' + x.mins + '"' + (x.taken ? ' disabled' : '') + '>' + fmtTime(x.mins) + '</button>'; });
+h += '</div>';
+} else {
+h = '<h3>Choose a day</h3><p style="font-size:17px">Pick a day on the calendar to see the times that are free. Calls run Monday to Friday, 9:00 AM to 5:00 PM ' + esc(TZ_LABEL) + '.</p>';
+}
+el.innerHTML = h;
+}
+
+function render() { renderCal(); renderSide(); }
+
+function setLive(msg) {
+var el = $('bk-live');
+el.hidden = !msg;
+el.textContent = msg || '';
+}
+$('bk-tz').textContent = 'Times are shown in ' + TZ_LABEL + '.';
+
+$('bk-prev').addEventListener('click', function () { view.m--; if (view.m < 0) { view.m = 11; view.y--; } renderCal(); });
+$('bk-next').addEventListener('click', function () { view.m++; if (view.m > 11) { view.m = 0; view.y++; } renderCal(); });
+$('bk-days').addEventListener('click', function (e) {
+var b = e.target.closest ? e.target.closest('[data-date]') : null;
+if (!b || b.disabled) { return; }
+selDate = b.getAttribute('data-date'); selSlot = null; done = null; errMsg = '';
+render();
+});
+$('bk-side').addEventListener('click', function (e) {
+var t = e.target;
+var s = t.closest ? t.closest('[data-slot]') : null;
+if (s && !s.disabled) { selSlot = +s.getAttribute('data-slot'); errMsg = ''; renderSide(); return; }
+if (t.id === 'bk-back') { selSlot = null; errMsg = ''; renderSide(); return; }
+if (t.id === 'bk-again') { done = null; selDate = null; selSlot = null; render(); }
+});
+$('bk-side').addEventListener('submit', function (e) {
+e.preventDefault();
+if (busy || !selSlot) { return; }
+var name = $('bk-name').value.trim(), email = $('bk-email').value.trim();
+if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !$('bk-consent').checked) {
+errMsg = 'Please enter your name, a valid email and tick the consent box.';
+var keep = { n: name, e: email, u: $('bk-url').value, t: $('bk-topic').value, o: $('bk-notes').value };
+renderSide();
+$('bk-name').value = keep.n; $('bk-email').value = keep.e; $('bk-url').value = keep.u; $('bk-topic').value = keep.t; $('bk-notes').value = keep.o;
+return;
+}
+book({ name: name, email: email, store: $('bk-url').value.trim(), topic: $('bk-topic').value, notes: $('bk-notes').value.trim() });
+});
+
+function fail(msg) { busy = false; errMsg = msg; renderSide(); }
+
+async function book(info) {
+if (!db) { fail('Live booking is not available in this view, so nothing was saved. Please use the <a class="lnk" href="#contact">contact form</a> instead.'); return; }
+busy = true; errMsg = ''; renderSide();
+var dk = selDate, mins = selSlot, key = skey(dk, mins), slotRef = db.doc('slots/' + key), wrote = false;
+try {
+var lease = await slotRef.acquire({ holder: uid || 'visitor', ttlMs: 10000 });
+if (!lease.acquired) { selSlot = null; fail('Someone else is booking that time right now. Please choose another.'); return; }
+var snap = await slotRef.get();
+if (snap.exists && snap.data() && snap.data().taken) { selSlot = null; fail('Sorry, that time was just booked. Please choose another.'); return; }
+await slotRef.set({ taken: true });
+wrote = true;
+var rec = { date: dk, mins: mins, name: info.name, email: info.email, store: info.store, topic: info.topic, notes: info.notes, created: Date.now() };
+var items = {}; items[key] = rec;
+var bref = db.doc('bookings/' + (uid || 'anon'));
+var bs = await bref.get();
+if (bs.exists) { await bref.update({ items: items }); } else { await bref.set({ items: items }); }
+busy = false; done = { date: dk, mins: mins, email: info.email }; render();
+} catch (err) {
+if (wrote) { try { await slotRef.delete(); } catch (e2) {} }
+selSlot = null;
+fail('We could not save your booking, so nothing was reserved. Booking needs a signed-in account with access to this page. You can use the <a class="lnk" href="#contact">contact form</a> instead.');
+}
+}
+
+render();
+
+(async function () {
+if (!window.claude || !window.claude.use) { setLive('Live availability is not connected in this view.'); return; }
+try {
+var user = await claude.use('user');
+if (user) { try { uid = await user.id(); } catch (e) {} try { isAdmin = !!(await user.canEdit()); } catch (e) {} }
+db = await claude.use('db');
+} catch (e) { db = null; }
+if (!db) { setLive('Live availability is not connected for your account, so bookings cannot be saved here yet. Please use the contact form.'); return; }
+var timer = setTimeout(function () { setLive('Still loading the latest availability. Times shown may be out of date.'); }, 10000);
+try {
+db.collection('slots').onSnapshot(function (snap) {
+var t = {};
+snap.docs.forEach(function (d) { var v = d.data(); if (v && v.taken) { t[d.id] = true; } });
+taken = t;
+if (!snap.metadata.fromCache) { clearTimeout(timer); setLive(''); }
+renderCal();
+if (selDate && !selSlot && !done) { renderSide(); }
+}, function () { clearTimeout(timer); setLive('Could not load live availability right now. Times shown may be out of date.'); });
+} catch (e) { clearTimeout(timer); setLive('Could not load live availability right now.'); }
+})();
+})();
+</script>
+
+</body></html>
