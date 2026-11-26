@@ -2033,13 +2033,18 @@ function list(arr, cls) {
 return '<ul class="' + cls + '">' + arr.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
 }
 
+
 function renderDetail(o) {
 var c = o.cat;
 var h = '<section class="bg-cream"><div class="wrap phead" style="padding-bottom:clamp(40px,5vw,64px)">';
 h += '<div class="crumb"><a href="#services">Services</a><span>/</span><button type="button" data-goto-group="' + c.id + '">' + esc(c.name) + '</button></div>';
-h += '<div class="eb eyr">' + esc(c.name) + '</div><h1>' + esc(o.name) + '</h1><p class="lead">' + esc(o.desc) + '</p>';
+
+// Removed the duplicate category heading. Keep the service title as the main H1.
+h += '<h1>' + esc(o.name) + '</h1><p class="lead">' + esc(o.desc) + '</p>';
+
 h += '<div class="chips"><span class="chip">Basic Tier</span><span class="chip">' + esc(o.dur) + '</span></div>';
 h += '<div class="btns"><a class="btn btn-gold" href="#book">Start this service</a><a class="btn btn-line" href="#book">Call an Admin</a></div></div></section>';
+
 h += '<section class="bg-cream"><div class="wrap" style="padding-bottom:clamp(64px,9vw,112px)"><div class="sd"><div class="sd-main">';
 h += '<div><h2>What is included</h2>' + list(o.inc, 'ticks') + '</div>';
 h += '<div><h2>The goal</h2><p style="font-size:19px;color:var(--text)">' + esc(o.obj) + '</p></div>';
@@ -2050,6 +2055,7 @@ h += '<div><h2>Questions</h2><details><summary>Is there more than one tier?</sum
 h += '</div><aside class="sd-side"><div class="tier"><div class="eb">Basic Tier</div><dl>';
 h += '<div><dt>Tier</dt><dd>Basic Tier (the only tier)</dd></div><div><dt>Typical duration</dt><dd>' + esc(o.dur) + '</dd></div><div><dt>Best for</dt><dd>' + esc(c.best) + '</dd></div><div><dt>Investment</dt><dd class="price">Custom quote</dd></div>';
 h += '</dl><a class="btn btn-gold" href="#book">Start this service</a><a class="btn btn-line" href="#book">Call an Admin</a></div></aside></div></div></section>';
+
 var rel = c.items.filter(function (x) { return x !== o; }).slice(0, 3);
 if (rel.length) {
 h += '<section class="bg-ivory sec-sm"><div class="wrap stack" style="gap:32px"><h2 style="font-size:clamp(28px,3vw,38px)">More in ' + esc(c.name) + '</h2><div class="rel">';
