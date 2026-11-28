@@ -1775,6 +1775,78 @@ textarea.fi{height:auto;min-height:140px;padding:14px 16px;resize:vertical}
 </section>
 </main>
 
+<!-- CLIENT DASHBOARD -->
+<main id="v-dashboard" hidden>
+<section class="bg-cream">
+<div class="wrap" style="padding-top:60px;padding-bottom:90px">
+
+<div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:35px">
+<div>
+<div class="eb eyr">ARCH CLIENT PORTAL</div>
+<h1 style="margin-top:10px">Your <em>workspace.</em></h1>
+<p>Welcome to your ARCH client dashboard.</p>
+</div>
+<button class="btn btn-line" id="client-logout" type="button">Sign out</button>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:35px">
+<div class="formbox">
+<div class="eb">ACTIVE SERVICES</div>
+<h2 style="font-size:32px;margin-top:12px">0</h2>
+<p>Your ongoing services</p>
+</div>
+<div class="formbox">
+<div class="eb">PROJECT PROGRESS</div>
+<h2 style="font-size:32px;margin-top:12px">0%</h2>
+<p>Overall project progress</p>
+</div>
+<div class="formbox">
+<div class="eb">OPEN ORDERS</div>
+<h2 style="font-size:32px;margin-top:12px">0</h2>
+<p>Orders being processed</p>
+</div>
+<div class="formbox">
+<div class="eb">UNREAD MESSAGES</div>
+<h2 style="font-size:32px;margin-top:12px">0</h2>
+<p>Messages from ARCH</p>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px">
+
+<div class="formbox">
+<div class="eb eyr">YOUR PROJECTS</div>
+<h2 style="margin-top:12px">Active services</h2>
+<p>Your purchased services and their current progress will appear here.</p>
+<div id="dashboard-services" style="margin-top:20px">No active services yet.</div>
+</div>
+
+<div class="formbox">
+<div class="eb eyr">PROJECT ACTIVITY</div>
+<h2 style="margin-top:12px">Recent updates</h2>
+<p>Stay informed about the latest progress on your projects.</p>
+<div id="dashboard-updates" style="margin-top:20px">No updates yet.</div>
+</div>
+
+<div class="formbox">
+<div class="eb eyr">ORDERS & INVOICES</div>
+<h2 style="margin-top:12px">Your purchases</h2>
+<p>View your orders, invoices and payment information.</p>
+<div id="dashboard-orders" style="margin-top:20px">No orders yet.</div>
+</div>
+
+<div class="formbox">
+<div class="eb eyr">MESSAGES</div>
+<h2 style="margin-top:12px">Stay connected</h2>
+<p>Updates and important messages from the ARCH team will appear here.</p>
+<div id="dashboard-messages" style="margin-top:20px">No messages yet.</div>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+
 <!-- BOOK -->
 <main id="v-book" hidden>
 <section class="bg-cream">
@@ -2029,8 +2101,8 @@ heroSec.classList.add('no3d');
 <script>
 (function () {
 'use strict';
-var VIEWS = ['home', 'services', 'work', 'process', 'book', 'about', 'journal', 'contact'];
-
+var VIEWS = ['home', 'services', 'work', 'process', 'book', 'about', 'journal', 'contact', 'login', 'register', 'verify', 'dashboard'];
+ 
 var CTA = {
 services: { h: 'Not sure which services fit your store?', p: 'Book a short call and we will recommend where to start, and leave out what you do not need.', a: 'Book a Strategy Call', ah: '#book', b: 'Contact us', bh: '#contact' },
 work: { h: 'Let us set your baseline.', p: 'A strategy call is the quickest way to find out which numbers to move first.', a: 'Book a Strategy Call', ah: '#book', b: 'Browse services', bh: '#services' },
