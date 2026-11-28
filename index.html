@@ -2389,7 +2389,125 @@ $('client-register-form').addEventListener('submit', async function (e) {
     }
 
     note.textContent = 'Account created! Please check your email for your verification link.';
+   localStorage.setItem('arch_client_email', payload.email);
     $('client-register-form').reset();
+
+  } catch (error) {
+    note.textContent = 'Unable to connect right now. Please try again shortly.';
+  }
+});
+
+var verifyNote = $('verify-note');
+var verifyEmail = $('verify-email-display');
+
+async function verifyClientEmail() {
+  var params = new URLSearchParams(window.location.search);
+  var token = params.get('verification_token');
+
+  if (!token) return;
+
+  verifyNote.hidden = false;
+  verifyNote.textContent = 'Verifying your email address...';
+
+  try {
+    var response = await fetch(CLIENT_API + '/auth/verify-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: token })
+    });
+
+    var data = await response.json();
+
+    if (response.ok && data.ok) {
+      verifyNote.textContent = 'Your email has been verified successfully! You can now sign in.';
+      verifyNote.style.color = 'green';
+      window.history.replaceState({}, '', '/#verify');
+    } else {
+      verifyNote.textContent = 'This verification link is invalid or has expired. You can request another email below.';
+    }
+  } catch (error) {
+    verifyNote.textContent = 'Unable to verify right now. Please try again.';
+  }
+}
+
+$('resend-verification').addEventListener('click', async function () {
+  var email = localStorage.getItem('arch_client_email');
+
+  if (!email) {
+    email = window.prompt('Please enter the email address you registered with.');
+  }
+
+  if (!email) return;
+
+  verifyNote.hidden = false;
+  verifyNote.textContent = 'Sending verification email...';
+
+  try {
+    var response = await fetch(CLIENT_API + '/auth/resend-verification', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.trim() })
+    });
+
+    var data = await response.json();
+
+    verifyNote.textContent = data.message || 'If your account needs verification, an email will be sent.';
+  } catch (error) {
+    verifyNote.textContent = 'Unable to send the request. Please try again.';
+  }
+});
+
+verifyClientEmail();
+
+$('client-login-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  var note = $('client-login-note');
+  note.hidden = false;
+  note.textContent = 'Signing you in...';
+
+  var email = $('client-login-email').value.trim();
+  var password = $('client-login-password').value;
+
+  try {
+    var response = await fetch(CLIENT_API + '/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    });
+
+    var data = await response.json();
+
+    if (!response.ok) {
+      if (data.error === 'email_not_verified') {
+        localStorage.setItem('arch_client_email', email);
+        verifyEmail.textContent = email;
+        note.textContent = 'Please verify your email before signing in. You can request another verification link.';
+        return;
+      }
+
+      if (data.error === 'account_locked') {
+        note.textContent = 'Your account is temporarily locked. Please try again in 15 minutes.';
+        return;
+      }
+
+      if (data.error === 'too_many_requests') {
+        note.textContent = 'Too many attempts. Please wait a little and try again.';
+        return;
+      }
+
+      note.textContent = 'Incorrect email or password. Please try again.';
+      return;
+    }
+
+    localStorage.setItem('arch_client_email', data.client.email);
+    note.textContent = 'Login successful. Opening your dashboard...';
+
+    window.location.hash = 'dashboard';
 
   } catch (error) {
     note.textContent = 'Unable to connect right now. Please try again shortly.';
