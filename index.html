@@ -1657,6 +1657,46 @@ textarea.fi{height:auto;min-height:140px;padding:14px 16px;resize:vertical}
 </section>
 </main>
 
+<!-- CLIENT LOGIN -->
+<main id="v-login" hidden>
+<section class="bg-cream">
+<div class="wrap" style="padding-top:clamp(65px,9vw,110px);padding-bottom:clamp(70px,9vw,120px)">
+<div style="max-width:520px;margin:0 auto">
+<div class="formbox">
+<div class="eb eyr">CLIENT PORTAL</div>
+<h1 style="margin-top:12px">Welcome <em>back.</em></h1>
+<p>Sign in to access your ARCH client workspace, project updates and account information.</p>
+
+<form id="client-login-form">
+<div class="fld" style="flex:none;margin-top:24px">
+<label class="eb" for="client-login-email">Email address</label>
+<input class="fi" id="client-login-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+</div>
+
+<div class="fld" style="flex:none;margin-top:18px">
+<label class="eb" for="client-login-password">Password</label>
+<input class="fi" id="client-login-password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+</div>
+
+<div style="display:flex;justify-content:flex-end;margin-top:12px">
+<a href="#forgot-password">Forgot password?</a>
+</div>
+
+<button class="btn btn-dark" type="submit" style="margin-top:24px;width:100%">Sign in to your account</button>
+
+<p id="client-login-note" class="status" role="status" hidden></p>
+</form>
+
+<div style="border-top:1px solid rgba(0,0,0,.12);margin-top:28px;padding-top:22px;text-align:center">
+<p>New to ARCH?</p>
+<a class="btn btn-line" href="#register" style="margin-top:10px">Create a client account</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
 <!-- BOOK -->
 <main id="v-book" hidden>
 <section class="bg-cream">
