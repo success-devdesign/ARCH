@@ -1720,7 +1720,7 @@ textarea.fi{height:auto;min-height:140px;padding:14px 16px;resize:vertical}
 
 <div class="fld" style="flex:none;margin-top:18px">
 <label class="eb" for="register-password">Create password</label>
-<input class="fi" id="register-password" type="password" autocomplete="new-password" minlength="10" placeholder="At least 10 characters" required>
+<input class="fi" id="register-password" type="password" autocomplete="new-password" minlength="12" placeholder="At least 10 characters" required>
 </div>
 
 <div class="fld" style="flex:none;margin-top:18px">
@@ -2353,6 +2353,52 @@ $('contact-note').hidden = false;
 $('nl-form').addEventListener('submit', function (e) {
 e.preventDefault();
 $('nl-note').hidden = false;
+});
+
+var CLIENT_API = 'https://arch-backend-4ekm.onrender.com/api/client';
+
+$('client-register-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  var note = $('client-register-note');
+  note.hidden = false;
+  note.textContent = 'Creating your account...';
+
+  var payload = {
+    name: $('register-name').value.trim(),
+    email: $('register-email').value.trim(),
+    password: $('register-password').value,
+    company: $('register-company').value.trim(),
+    store_url: $('register-store').value.trim()
+  };
+
+  try {
+    var response = await fetch(CLIENT_API + '/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify(payload)
+    });
+
+    var data = await response.json();
+
+    if (!response.ok) {
+      if (data.error === 'account_already_exists') {
+        note.textContent = 'An account already exists with this email. Please sign in or contact us for help.';
+      } else if (data.error === 'verification_email_unavailable') {
+        note.textContent = 'Your account may have been created, but the verification email could not be sent. Please try resending it later.';
+      } else {
+        note.textContent = 'Please check your details and try again.';
+      }
+      return;
+    }
+
+    note.textContent = 'Account created! Please check your email for your verification link.';
+    $('client-register-form').reset();
+
+  } catch (error) {
+    note.textContent = 'Unable to connect right now. Please try again shortly.';
+  }
 });
 
 window.addEventListener('hashchange', route);
